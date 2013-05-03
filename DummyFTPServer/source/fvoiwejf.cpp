@@ -1,0 +1,5 @@
+#include "fvoiwejf.h"
+
+fvoiwejf::fvoiwejf(QObject *parent) :
+    QObject(parent) {
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Projekt FTP server</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li class="current"><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Projekt FTP server </h1><dl class="author"><dt><b>Autor:</b></dt><dd>Marek Hakala &lt;<a href="mailto:marek@hakala.cz">marek@hakala.cz</a>&gt; </dd></dl>
+<dl class="version"><dt><b>Verze:</b></dt><dd>1.0.0-unstable </dd></dl>
+<dl class="date"><dt><b>Datum:</b></dt><dd>2010 </dd></dl>
+<h2><a class="anchor" id="oprojektu">
+DummyFTPServer</a></h2>
+<p>Toto je semestrální práce do předmětu BI-PA2 na FIT ČVUT.</p>
+<div align="center">
+<img src="dfsd.png" alt="dfsd.png"/>
+</div>
+<h3><a class="anchor" id="zadani">
+Zadání</a></h3>
+<p>Program bude sloužit k přenosu souboru prostřednictvím protokolu FTP (File Transfer Protocol). Určitě stojí za to zmínit, že program bude používat sítovou architekturu klient-server. Aplikace po startu provede načtení konfiguračního souboru. Na základě konfigurace začne program poslouchat na daném TCP portu a soketu. Jakmile se připojí k serveru klient bude vytvořeno speciální vlákno v rámci, kterého s ním bude komunikováno. Prvním krokem bude autorizační mechanismus, který provede ověření uživatelského jména a hesla oproti speciálnímu souboru. Po řádné autorizaci bude uživateli zpřístupněn obsah domovského adresáře a bude mít možnost obousměrného přenosu souborů.</p>
+<p>Aplikace nebude obsahovat kompletní implementaci FTP protokolu podle normy RFC959 ale pouze nezbytnou část pro úplně základní operace. A to s časových důvodů.</p>
+<p>Program bude pracovat v textovém módu. Informace o běhu ftp serveru budou vypisovány na standardním výstupu. Program bude možné vypnout stisknutím klávesy „CTRL + C“.</p>
+<h3><a class="anchor" id="autorizace">
+Autorizace</a></h3>
+<p>Vzdálený klient bude vyzván k zaslání uživatelského jména a hesla. Údaje budou porovnaný s údaji ve speciálním souboru, sloužícímu k autorizaci. Jeden řádek odpovídá jednomu záznamu.</p>
+<h3><a class="anchor" id="prenos_souboru">
+Přenos souboru</a></h3>
+<p>Uživatel si vyžádá soubor, který mu bude binárně zaslán prostřednictvím tcp soketu. V opačném směru bude klient vyzván k zaslání obsahu souboru prostřednictvím tcp soketu. Obsah bude převzat a uložen do nově vzniklého souboru na straně serveru.</p>
+<h3><a class="anchor" id="nastaveni">
+Nastavení</a></h3>
+<p>Primárně bude využit konfigurační soubor. Ale některé věci bude možné změnit pomoci vstupních argumentů. V konfiguračním souboru uživatel nalezne proměnné port, anonymous a anonymousPath pomocí, kterých budete moct změnit nastavení.</p>
+<h3><a class="anchor" id="Screenshot">
+Screenshot</a></h3>
+<div align="center">
+<img src="dfsd-usage.png" alt="dfsd-usage.png"/>
+</div>
+<h4><a class="anchor" id="Technologie">
+Technologie</a></h4>
+<div align="center">
+<img src="qt.png" alt="qt.png"/>
+</div>
+ </div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:43 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

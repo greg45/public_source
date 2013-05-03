@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::WorkPath</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00013.html">WorkPath</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::WorkPath</h1><!-- doxytag: class="DummyFTPServer::WorkPath" -->
+<p>Třídá provádí veškerou práci, ze soubory a adresáři od načítání obsahu po mazání atd...  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00049_source.html">workpath.h</a>&gt;</code></p>
+
+<p><a href="a00083.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a1f289d1075aec4e44162891479bddb2e">WorkPath</a> (const QString &amp;path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří objekt, který provádí manipulaci, ze soubory a adresáři.  <a href="#a1f289d1075aec4e44162891479bddb2e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c60e136e91af281f32eb9eb9b873f9f"></a><!-- doxytag: member="DummyFTPServer::WorkPath::realPath" ref="a8c60e136e91af281f32eb9eb9b873f9f" args="()" -->
+QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f">realPath</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vrací reálnou cestu k aktuálnímu adresáři. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a8539d91163961160aa26526fd41f4991">realFilePath</a> (QString filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provádí překlad ftp adresy na reálnou adresu.  <a href="#a8539d91163961160aa26526fd41f4991"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51b01a3f221e20cb81422bf28519a051"></a><!-- doxytag: member="DummyFTPServer::WorkPath::cdUp" ref="a51b01a3f221e20cb81422bf28519a051" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a51b01a3f221e20cb81422bf28519a051">cdUp</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nastaví aktuální adresář na nadřazený adresář. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2ae3c1aad705e3a347f7fc5f1deb13a"></a><!-- doxytag: member="DummyFTPServer::WorkPath::pwd" ref="ab2ae3c1aad705e3a347f7fc5f1deb13a" args="()" -->
+QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#ab2ae3c1aad705e3a347f7fc5f1deb13a">pwd</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vrací cestu k aktuálnímu adresáři. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a113bfade3965032a32287704c5a58891">cwd</a> (const QString &amp;path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mění aktuální adresář.  <a href="#a113bfade3965032a32287704c5a58891"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf551afa358063b547f55baada43b0c8"></a><!-- doxytag: member="DummyFTPServer::WorkPath::cwd" ref="acf551afa358063b547f55baada43b0c8" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#acf551afa358063b547f55baada43b0c8">cwd</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mění aktuální adresář na domovský adresář. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#ad2e70a515a698a19d2551e6be40f1f87">mkd</a> (const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří nový adresář.  <a href="#ad2e70a515a698a19d2551e6be40f1f87"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a3a5087a42d250e77d599b21581b66d19">rmd</a> (const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Smaže adresář.  <a href="#a3a5087a42d250e77d599b21581b66d19"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a045f573b9406025081e2f5b958f368a2">dele</a> (const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Smaže soubor.  <a href="#a045f573b9406025081e2f5b958f368a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a36e3078ce57548854eb38f5e7e066403">rename</a> (const QString &amp;fromFileName, const QString &amp;toFileName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Přejmenovává soubory.  <a href="#a36e3078ce57548854eb38f5e7e066403"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#ab00b9d2e231dc46e88161d0463382ce9">isWritable</a> (const QString &amp;filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Kontrola zapisovatelnosti.  <a href="#ab00b9d2e231dc46e88161d0463382ce9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#aec34e5a2393931087615a71cf2d89922">list</a> (QList&lt; QByteArray &gt; &amp;sList)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Seznam souborů.  <a href="#aec34e5a2393931087615a71cf2d89922"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Statické veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#aa982eed48e92b9f2e98fdf22b3393d23">getOwner</a> (const QFileInfo &amp;info)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání vlastníka.  <a href="#aa982eed48e92b9f2e98fdf22b3393d23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00013.html#a1df62de90d6e4fedf45112b7dc30ea50">getGroup</a> (const QFileInfo &amp;info)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání skupiny.  <a href="#a1df62de90d6e4fedf45112b7dc30ea50"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Třídá provádí veškerou práci, ze soubory a adresáři od načítání obsahu po mazání atd... </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00049_source.html#l00036">36</a> v souboru <a class="el" href="a00049_source.html">workpath.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="a1f289d1075aec4e44162891479bddb2e"></a><!-- doxytag: member="DummyFTPServer::WorkPath::WorkPath" ref="a1f289d1075aec4e44162891479bddb2e" args="(const QString &amp;path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::WorkPath::WorkPath </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří objekt, který provádí manipulaci, ze soubory a adresáři. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Nastaví pracovní cestu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00052">52</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="a113bfade3965032a32287704c5a58891"></a><!-- doxytag: member="DummyFTPServer::WorkPath::cwd" ref="a113bfade3965032a32287704c5a58891" args="(const QString &amp;path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::cwd </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mění aktuální adresář. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Nastaví cestu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00081">81</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a113bfade3965032a32287704c5a58891_cgraph.png" border="0" usemap="#a00013_a113bfade3965032a32287704c5a58891_cgraph_map" alt=""></div>
+<map name="a00013_a113bfade3965032a32287704c5a58891_cgraph_map" id="a00013_a113bfade3965032a32287704c5a58891_cgraph">
+<area shape="rect" id="node3" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="289,5,551,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a113bfade3965032a32287704c5a58891_icgraph.png" border="0" usemap="#a00013_a113bfade3965032a32287704c5a58891_icgraph_map" alt=""></div>
+<map name="a00013_a113bfade3965032a32287704c5a58891_icgraph_map" id="a00013_a113bfade3965032a32287704c5a58891_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="289,5,631,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="680,5,1005,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a045f573b9406025081e2f5b958f368a2"></a><!-- doxytag: member="DummyFTPServer::WorkPath::dele" ref="a045f573b9406025081e2f5b958f368a2" args="(const QString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::dele </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Smaže soubor. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Název souboru. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00142">142</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00048_source.html#l00063">realFilePath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a045f573b9406025081e2f5b958f368a2_cgraph.png" border="0" usemap="#a00013_a045f573b9406025081e2f5b958f368a2_cgraph_map" alt=""></div>
+<map name="a00013_a045f573b9406025081e2f5b958f368a2_cgraph_map" id="a00013_a045f573b9406025081e2f5b958f368a2_cgraph">
+<area shape="rect" id="node3" href="a00013.html#a8539d91163961160aa26526fd41f4991" title="Provádí překlad ftp adresy na reálnou adresu." alt="" coords="293,5,576,35"/><area shape="rect" id="node5" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="625,5,887,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a045f573b9406025081e2f5b958f368a2_icgraph.png" border="0" usemap="#a00013_a045f573b9406025081e2f5b958f368a2_icgraph_map" alt=""></div>
+<map name="a00013_a045f573b9406025081e2f5b958f368a2_icgraph_map" id="a00013_a045f573b9406025081e2f5b958f368a2_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="295,5,636,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="685,5,1011,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1df62de90d6e4fedf45112b7dc30ea50"></a><!-- doxytag: member="DummyFTPServer::WorkPath::getGroup" ref="a1df62de90d6e4fedf45112b7dc30ea50" args="(const QFileInfo &amp;info)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DummyFTPServer::WorkPath::getGroup </td>
+          <td>(</td>
+          <td class="paramtype">const QFileInfo &amp;&nbsp;</td>
+          <td class="paramname"> <em>info</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání skupiny. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>info</em>&nbsp;</td><td>Ukazatel na soubor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00043">43</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00048_source.html#l00184">list()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a1df62de90d6e4fedf45112b7dc30ea50_icgraph.png" border="0" usemap="#a00013_a1df62de90d6e4fedf45112b7dc30ea50_icgraph_map" alt=""></div>
+<map name="a00013_a1df62de90d6e4fedf45112b7dc30ea50_icgraph_map" id="a00013_a1df62de90d6e4fedf45112b7dc30ea50_icgraph">
+<area shape="rect" id="node3" href="a00013.html#aec34e5a2393931087615a71cf2d89922" title="Seznam souborů." alt="" coords="325,5,555,35"/><area shape="rect" id="node5" href="a00008.html#aab148b9e6020b827dc4fa2573d66ea41" title="Vytváří objekt pro zpracování FTP příkaz LIST." alt="" coords="604,5,985,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa982eed48e92b9f2e98fdf22b3393d23"></a><!-- doxytag: member="DummyFTPServer::WorkPath::getOwner" ref="aa982eed48e92b9f2e98fdf22b3393d23" args="(const QFileInfo &amp;info)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DummyFTPServer::WorkPath::getOwner </td>
+          <td>(</td>
+          <td class="paramtype">const QFileInfo &amp;&nbsp;</td>
+          <td class="paramname"> <em>info</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání vlastníka. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>info</em>&nbsp;</td><td>Ukazatel na soubor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00032">32</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00048_source.html#l00184">list()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_aa982eed48e92b9f2e98fdf22b3393d23_icgraph.png" border="0" usemap="#a00013_aa982eed48e92b9f2e98fdf22b3393d23_icgraph_map" alt=""></div>
+<map name="a00013_aa982eed48e92b9f2e98fdf22b3393d23_icgraph_map" id="a00013_aa982eed48e92b9f2e98fdf22b3393d23_icgraph">
+<area shape="rect" id="node3" href="a00013.html#aec34e5a2393931087615a71cf2d89922" title="Seznam souborů." alt="" coords="325,5,555,35"/><area shape="rect" id="node5" href="a00008.html#aab148b9e6020b827dc4fa2573d66ea41" title="Vytváří objekt pro zpracování FTP příkaz LIST." alt="" coords="604,5,985,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab00b9d2e231dc46e88161d0463382ce9"></a><!-- doxytag: member="DummyFTPServer::WorkPath::isWritable" ref="ab00b9d2e231dc46e88161d0463382ce9" args="(const QString &amp;filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::isWritable </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kontrola zapisovatelnosti. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Název souboru. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00178">178</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_ab00b9d2e231dc46e88161d0463382ce9_icgraph.png" border="0" usemap="#a00013_ab00b9d2e231dc46e88161d0463382ce9_icgraph_map" alt=""></div>
+<map name="a00013_ab00b9d2e231dc46e88161d0463382ce9_icgraph_map" id="a00013_ab00b9d2e231dc46e88161d0463382ce9_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="327,5,668,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="717,5,1043,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aec34e5a2393931087615a71cf2d89922"></a><!-- doxytag: member="DummyFTPServer::WorkPath::list" ref="aec34e5a2393931087615a71cf2d89922" args="(QList&lt; QByteArray &gt; &amp;sList)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DummyFTPServer::WorkPath::list </td>
+          <td>(</td>
+          <td class="paramtype">QList&lt; QByteArray &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>sList</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Seznam souborů. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>sList</em>&nbsp;</td><td>Vstupní seznam souborů. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00184">184</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00048_source.html#l00043">getGroup()</a>, <a class="el" href="a00048_source.html#l00032">getOwner()</a> a <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00024_source.html#l00027">DummyFTPServer::FTPCommandLIST::FTPCommandLIST()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_aec34e5a2393931087615a71cf2d89922_cgraph.png" border="0" usemap="#a00013_aec34e5a2393931087615a71cf2d89922_cgraph_map" alt=""></div>
+<map name="a00013_aec34e5a2393931087615a71cf2d89922_cgraph_map" id="a00013_aec34e5a2393931087615a71cf2d89922_cgraph">
+<area shape="rect" id="node3" href="a00013.html#a1df62de90d6e4fedf45112b7dc30ea50" title="Slouží k získání skupiny." alt="" coords="284,5,553,35"/><area shape="rect" id="node5" href="a00013.html#aa982eed48e92b9f2e98fdf22b3393d23" title="Slouží k získání vlastníka." alt="" coords="283,59,555,88"/><area shape="rect" id="node7" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="288,112,549,141"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_aec34e5a2393931087615a71cf2d89922_icgraph.png" border="0" usemap="#a00013_aec34e5a2393931087615a71cf2d89922_icgraph_map" alt=""></div>
+<map name="a00013_aec34e5a2393931087615a71cf2d89922_icgraph_map" id="a00013_aec34e5a2393931087615a71cf2d89922_icgraph">
+<area shape="rect" id="node3" href="a00008.html#aab148b9e6020b827dc4fa2573d66ea41" title="Vytváří objekt pro zpracování FTP příkaz LIST." alt="" coords="284,5,665,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2e70a515a698a19d2551e6be40f1f87"></a><!-- doxytag: member="DummyFTPServer::WorkPath::mkd" ref="ad2e70a515a698a19d2551e6be40f1f87" args="(const QString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::mkd </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří nový adresář. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Nastaví jméno nového adresáře. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00111">111</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00049_source.html#l00074">cwd()</a> a <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_ad2e70a515a698a19d2551e6be40f1f87_cgraph.png" border="0" usemap="#a00013_ad2e70a515a698a19d2551e6be40f1f87_cgraph_map" alt=""></div>
+<map name="a00013_ad2e70a515a698a19d2551e6be40f1f87_cgraph_map" id="a00013_ad2e70a515a698a19d2551e6be40f1f87_cgraph">
+<area shape="rect" id="node3" href="a00013.html#acf551afa358063b547f55baada43b0c8" title="Mění aktuální adresář na domovský adresář." alt="" coords="308,5,543,35"/><area shape="rect" id="node5" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="295,59,556,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_ad2e70a515a698a19d2551e6be40f1f87_icgraph.png" border="0" usemap="#a00013_ad2e70a515a698a19d2551e6be40f1f87_icgraph_map" alt=""></div>
+<map name="a00013_ad2e70a515a698a19d2551e6be40f1f87_icgraph_map" id="a00013_ad2e70a515a698a19d2551e6be40f1f87_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="295,5,636,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="685,5,1011,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8539d91163961160aa26526fd41f4991"></a><!-- doxytag: member="DummyFTPServer::WorkPath::realFilePath" ref="a8539d91163961160aa26526fd41f4991" args="(QString filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DummyFTPServer::WorkPath::realFilePath </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Provádí překlad ftp adresy na reálnou adresu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Název souboru. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00063">63</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00048_source.html#l00142">dele()</a> a <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a8539d91163961160aa26526fd41f4991_cgraph.png" border="0" usemap="#a00013_a8539d91163961160aa26526fd41f4991_cgraph_map" alt=""></div>
+<map name="a00013_a8539d91163961160aa26526fd41f4991_cgraph_map" id="a00013_a8539d91163961160aa26526fd41f4991_cgraph">
+<area shape="rect" id="node3" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="337,5,599,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a8539d91163961160aa26526fd41f4991_icgraph.png" border="0" usemap="#a00013_a8539d91163961160aa26526fd41f4991_icgraph_map" alt=""></div>
+<map name="a00013_a8539d91163961160aa26526fd41f4991_icgraph_map" id="a00013_a8539d91163961160aa26526fd41f4991_icgraph">
+<area shape="rect" id="node3" href="a00013.html#a045f573b9406025081e2f5b958f368a2" title="Smaže soubor." alt="" coords="337,5,575,35"/><area shape="rect" id="node5" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="625,32,967,61"/><area shape="rect" id="node7" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="1016,32,1341,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a36e3078ce57548854eb38f5e7e066403"></a><!-- doxytag: member="DummyFTPServer::WorkPath::rename" ref="a36e3078ce57548854eb38f5e7e066403" args="(const QString &amp;fromFileName, const QString &amp;toFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::rename </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>fromFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>toFileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Přejmenovává soubory. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fromFileName</em>&nbsp;</td><td>Starý název souboru. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>toFileName</em>&nbsp;</td><td>Nový název souboru. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00162">162</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00049_source.html#l00074">cwd()</a> a <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a36e3078ce57548854eb38f5e7e066403_cgraph.png" border="0" usemap="#a00013_a36e3078ce57548854eb38f5e7e066403_cgraph_map" alt=""></div>
+<map name="a00013_a36e3078ce57548854eb38f5e7e066403_cgraph_map" id="a00013_a36e3078ce57548854eb38f5e7e066403_cgraph">
+<area shape="rect" id="node3" href="a00013.html#acf551afa358063b547f55baada43b0c8" title="Mění aktuální adresář na domovský adresář." alt="" coords="329,5,564,35"/><area shape="rect" id="node5" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="316,59,577,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a36e3078ce57548854eb38f5e7e066403_icgraph.png" border="0" usemap="#a00013_a36e3078ce57548854eb38f5e7e066403_icgraph_map" alt=""></div>
+<map name="a00013_a36e3078ce57548854eb38f5e7e066403_icgraph_map" id="a00013_a36e3078ce57548854eb38f5e7e066403_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="316,5,657,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="707,5,1032,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a5087a42d250e77d599b21581b66d19"></a><!-- doxytag: member="DummyFTPServer::WorkPath::rmd" ref="a3a5087a42d250e77d599b21581b66d19" args="(const QString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::WorkPath::rmd </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Smaže adresář. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Nastaví jméno adresáře. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00048_source.html#l00124">124</a> v souboru <a class="el" href="a00048_source.html">workpath.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00048_source.html#l00057">realPath()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a3a5087a42d250e77d599b21581b66d19_cgraph.png" border="0" usemap="#a00013_a3a5087a42d250e77d599b21581b66d19_cgraph_map" alt=""></div>
+<map name="a00013_a3a5087a42d250e77d599b21581b66d19_cgraph_map" id="a00013_a3a5087a42d250e77d599b21581b66d19_cgraph">
+<area shape="rect" id="node3" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="292,5,553,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00013_a3a5087a42d250e77d599b21581b66d19_icgraph.png" border="0" usemap="#a00013_a3a5087a42d250e77d599b21581b66d19_icgraph_map" alt=""></div>
+<map name="a00013_a3a5087a42d250e77d599b21581b66d19_icgraph_map" id="a00013_a3a5087a42d250e77d599b21581b66d19_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="292,5,633,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="683,5,1008,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00049_source.html">workpath.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00048_source.html">workpath.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:53 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

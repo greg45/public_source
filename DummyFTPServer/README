@@ -1,0 +1,14 @@
+#
+#  Dummy FTP Server
+#  FILE : README
+#
+
+::>> COMPILE
+
+cd source/
+make
+
+::>> RUN
+
+cd build/
+./DummyFTPServer

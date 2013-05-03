@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="481,5,855,35"/>
+<area shape="rect" id="node13" href="$a00005.html#acb052bf5de54db15a8ac1c08f8dc0736" title="Metoda vrací ukazatel na uživatele podle zadaného jména." alt="" coords="551,59,785,88"/>
+<area shape="rect" id="node5" href="$a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="905,5,1249,35"/>
+<area shape="rect" id="node7" href="$a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="1299,5,1685,35"/>
+<area shape="rect" id="node9" href="$a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="1733,5,2133,35"/>
+<area shape="rect" id="node11" href="$a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="2183,5,2476,35"/>
+<area shape="rect" id="node15" href="$a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="907,59,1248,88"/>
+<area shape="rect" id="node17" href="$a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="1329,59,1655,88"/>
+</map>

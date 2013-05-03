@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00009.html#a35ba15a02a83c4b02f0d8b9803043b12" title="Slot, který obsluhuje chybové stavy." alt="" coords="773,142,1077,172"/>
+<area shape="rect" id="node5" href="$a00009.html#a166fb50f917cc545d29aee76d0df2e91" title="Vytváří objekt pro zpracování FTP příkaz RETR." alt="" coords="1151,89,1543,118"/>
+<area shape="rect" id="node7" href="$a00008.html#a9ad62f1b847765d576975da127887a12" title="Slot, který obsluhuje chybové stavy." alt="" coords="776,297,1075,326"/>
+<area shape="rect" id="node9" href="$a00008.html#aab148b9e6020b827dc4fa2573d66ea41" title="Vytváří objekt pro zpracování FTP příkaz LIST." alt="" coords="1156,297,1537,326"/>
+<area shape="rect" id="node11" href="$a00007.html#a5edf959609cedf663bab044dee8ad1d0" title="Slot, který obsluhuje chybové stavy." alt="" coords="405,246,677,276"/>
+<area shape="rect" id="node13" href="$a00008.html#a911e7754922e185ce750669cae447294" title="Dokončuje přenos a uzavírá spojení." alt="" coords="383,193,700,222"/>
+<area shape="rect" id="node18" href="$a00007.html#a3f25649639cd596edfb16631adfdc7b8" title="Dokončuje přenos a uzavírá spojení." alt="" coords="395,89,688,118"/>
+<area shape="rect" id="node25" href="$a00012.html#a5eb248046491d4a0f7cca3f89291b7f5" title="Metoda, která zajišťuje zpracování seznamu souboru a zaslání do socketu." alt="" coords="413,505,669,534"/>
+<area shape="rect" id="node27" href="$a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="755,465,1096,494"/>
+<area shape="rect" id="node31" href="$a00012.html#a5e4c565d6af762b1e86ef7f1784b9681" title="Metoda, která zapíná pasivní komunikační režim." alt="" coords="383,452,700,481"/>
+<area shape="rect" id="node35" href="$a00012.html#a6edcb0bcb4928ce32c3334bb6d612bbb" title="Zasílá do soketu úplné první zprávu a to uvítací." alt="" coords="749,544,1101,573"/>
+<area shape="rect" id="node15" href="$a00008.html#aa9e119efd9a66c85ad39cf94bbe7b8f1" title="Slot, který při zavolání naplní socket daty." alt="" coords="761,220,1089,249"/>
+<area shape="rect" id="node20" href="$a00009.html#ad5cd8527934dbb8e21545a8f00f65138" title="Slot, který při zavolání naplní socket daty." alt="" coords="759,89,1092,118"/>
+<area shape="rect" id="node29" href="$a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="1184,504,1509,533"/>
+</map>

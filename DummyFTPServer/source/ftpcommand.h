@@ -1,0 +1,106 @@
+/***************************************************************************
+ *   Copyright (C) 2010 by Marek Hakala   *
+ *   marek@hakala.cz   *
+ *
+ *   Semestrální práce PA2 - ČVUT FIT
+ *   Téma : Implementace FTP serveru
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
+#ifndef FTPCOMMAND_H
+#define FTPCOMMAND_H
+
+#include <QObject>
+
+#include <QFile>
+#include <QString>
+
+#include "serverthread.h"
+
+using DummyFTPServer::ServerThread;
+
+namespace DummyFTPServer {
+
+/*! \class FTPCommand
+ *  \brief Zajišťuje obsluhu FTP příkazu (Abstraktní třída).
+ */
+class FTPCommand : public QObject {
+
+    Q_OBJECT
+
+public:
+    /*! \fn FTPCommand(ServerThread *parent)
+     *  \brief Vytváří objekt pro zpracování FTP příkazu.
+     *  \param parent Ukazatel na předka.
+     */
+    FTPCommand(ServerThread *parent = 0);
+
+    /*! \fn FTPCommand(const QString &fileName, ServerThread *parent = 0)
+     *  \brief Vytváří objekt pro zpracování FTP příkazu.
+     *  \param fileName Název pracovního souboru.
+     *  \param parent Ukazatel na předka.
+     */
+    FTPCommand(const QString &fileName, ServerThread *parent = 0);
+
+    virtual ~FTPCommand() {}
+
+    /*! \fn ServerThread *parent() const
+     *  \brief Vrací ukazatel na serverové vlákno neboli na otcovský objekt.
+     */
+    virtual ServerThread *parent() const;
+
+protected:
+    /*! \var isConnected
+     *  \brief Příznak aktivního spojení.
+     */
+    bool isConnected;
+
+    /*! \var file
+     *  \brief Pracovní soubor.
+     */
+    QFile file;
+
+    /*! \var stParent
+     *  \brief Ukazatel na předka.
+     */
+    ServerThread *stParent;
+
+public slots:
+    /*! \fn void sendData()
+     *  \brief Slot, který při zavolání naplní socket daty.
+     */
+    virtual void sendData() = 0;
+
+    /*! \fn void finishing()
+     *  \brief Dokončuje přenos a uzavírá spojení.
+     */
+    virtual void finishing();
+
+    /*! \fn void error(bool stop = true)
+     *  \brief Slot, který obsluhuje chybové stavy.
+     */
+    virtual void error(bool stop = true);
+
+signals:
+    /*! \fn void finished()
+     *  \brief Signalizuje dokončení.
+     */
+    void finished();
+};
+}
+
+#endif // FTPCOMMAND_H

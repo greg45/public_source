@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00008.html" title="Zajišťuje obsluhu FTP příkazu LIST." alt="" coords="5,261,264,381"/>
+<area shape="rect" id="node5" href="$a00009.html" title="Zajišťuje obsluhu FTP příkazu RETR." alt="" coords="288,261,552,381"/>
+<area shape="rect" id="node7" href="$a00010.html" title="Zajištuje obsluhu FTP příkazu STOR." alt="" coords="576,261,843,381"/>
+</map>

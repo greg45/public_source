@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::Configuration</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00003.html">Configuration</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::Configuration</h1><!-- doxytag: class="DummyFTPServer::Configuration" -->
+<p>Třída sloužící jako databáze nastavení v paměti.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00016_source.html">configuration.h</a>&gt;</code></p>
+
+<p><a href="a00062.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#ace6a9598c37a802ba789d434d9cb43d4">Configuration</a> (std::string configFile=DEFAULT_CONF_PATH)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Uživatelský konstruktor, který provede otevření konfiguračního souboru pro čtení.  <a href="#ace6a9598c37a802ba789d434d9cb43d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#ad086bb5097ed23bc87995ce71eb85c4a">appendToSection</a> (std::string key, std::string value, std::string sectionName=&quot;global&quot;)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sloužící k přidávání hodnot do sekcí. Pokud není vybrána žádná sekce je automaticky zvolena globální sekce "global".  <a href="#ad086bb5097ed23bc87995ce71eb85c4a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#aaa780269028723cc035a787a05433a00">clean</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provede vyprázdnění databáze.  <a href="#aaa780269028723cc035a787a05433a00"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#a6036c6987189d51f882c43107db43c45">loadConfiguration</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provede načtení konfiguračního souboru.  <a href="#a6036c6987189d51f882c43107db43c45"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00004.html">ConfSection</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#a32e49891c855ad22baf888258f3040ba">getSection</a> (std::string name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání ukazatele na sekci.  <a href="#a32e49891c855ad22baf888258f3040ba"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Třída sloužící jako databáze nastavení v paměti. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00016_source.html#l00043">43</a> v souboru <a class="el" href="a00016_source.html">configuration.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="ace6a9598c37a802ba789d434d9cb43d4"></a><!-- doxytag: member="DummyFTPServer::Configuration::Configuration" ref="ace6a9598c37a802ba789d434d9cb43d4" args="(std::string configFile=DEFAULT_CONF_PATH)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::Configuration::Configuration </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>configFile</em> = <code>DEFAULT_CONF_PATH</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Uživatelský konstruktor, který provede otevření konfiguračního souboru pro čtení. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>configFile</em>&nbsp;</td><td>Nastaví cestu konfiguračního souboru. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00015_source.html#l00030">30</a> v souboru <a class="el" href="a00015_source.html">configuration.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="ad086bb5097ed23bc87995ce71eb85c4a"></a><!-- doxytag: member="DummyFTPServer::Configuration::appendToSection" ref="ad086bb5097ed23bc87995ce71eb85c4a" args="(std::string key, std::string value, std::string sectionName=&quot;global&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Configuration::appendToSection </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>sectionName</em> = <code>&quot;global&quot;</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda sloužící k přidávání hodnot do sekcí. Pokud není vybrána žádná sekce je automaticky zvolena globální sekce "global". </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Nastaví klíč pomocí, kterého bude hodnota přístupná. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>Nastaví hodnotu. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sectionName</em>&nbsp;</td><td>Vybere příslušnou sekci. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném vložení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00015_source.html#l00039">39</a> v souboru <a class="el" href="a00015_source.html">configuration.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00017_source.html#l00051">DummyFTPServer::ConfSection::append()</a> a <a class="el" href="a00015_source.html#l00082">getSection()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00003_ad086bb5097ed23bc87995ce71eb85c4a_cgraph.png" border="0" usemap="#a00003_ad086bb5097ed23bc87995ce71eb85c4a_cgraph_map" alt=""></div>
+<map name="a00003_ad086bb5097ed23bc87995ce71eb85c4a_cgraph_map" id="a00003_ad086bb5097ed23bc87995ce71eb85c4a_cgraph">
+<area shape="rect" id="node3" href="a00004.html#a3ca15d45293c73df2e24484a790e3082" title="Slouží k přidání položky." alt="" coords="415,5,692,35"/><area shape="rect" id="node5" href="a00003.html#a32e49891c855ad22baf888258f3040ba" title="Slouží k získání ukazatele na sekci." alt="" coords="400,59,707,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa780269028723cc035a787a05433a00"></a><!-- doxytag: member="DummyFTPServer::Configuration::clean" ref="aaa780269028723cc035a787a05433a00" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Configuration::clean </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Provede vyprázdnění databáze. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném vyprázdnění, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00015_source.html#l00141">141</a> v souboru <a class="el" href="a00015_source.html">configuration.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00015_source.html#l00054">loadConfiguration()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00003_aaa780269028723cc035a787a05433a00_icgraph.png" border="0" usemap="#a00003_aaa780269028723cc035a787a05433a00_icgraph_map" alt=""></div>
+<map name="a00003_aaa780269028723cc035a787a05433a00_icgraph_map" id="a00003_aaa780269028723cc035a787a05433a00_icgraph">
+<area shape="rect" id="node3" href="a00003.html#a6036c6987189d51f882c43107db43c45" title="Provede načtení konfiguračního souboru." alt="" coords="327,5,676,35"/><area shape="rect" id="node5" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="727,5,1020,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a32e49891c855ad22baf888258f3040ba"></a><!-- doxytag: member="DummyFTPServer::Configuration::getSection" ref="a32e49891c855ad22baf888258f3040ba" args="(std::string name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00004.html">ConfSection</a> * DummyFTPServer::Configuration::getSection </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání ukazatele na sekci. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Nastaví jméno hledané sekce. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací ukazatel na sekci. Pokud sekce neexistuje bude vrácen NULL pointer. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00015_source.html#l00082">82</a> v souboru <a class="el" href="a00015_source.html">configuration.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00015_source.html#l00039">appendToSection()</a> a <a class="el" href="a00019_source.html#l00091">DummyFTPServer::Core::getSettingsValue()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00003_a32e49891c855ad22baf888258f3040ba_icgraph.png" border="0" usemap="#a00003_a32e49891c855ad22baf888258f3040ba_icgraph_map" alt=""></div>
+<map name="a00003_a32e49891c855ad22baf888258f3040ba_icgraph_map" id="a00003_a32e49891c855ad22baf888258f3040ba_icgraph">
+<area shape="rect" id="node3" href="a00003.html#ad086bb5097ed23bc87995ce71eb85c4a" title="Metoda sloužící k přidávání hodnot do sekcí. Pokud není vybrána žádná..." alt="" coords="360,5,707,35"/><area shape="rect" id="node5" href="a00005.html#aff315e73e2cf8a201f98877e4495bb58" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="388,59,679,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6036c6987189d51f882c43107db43c45"></a><!-- doxytag: member="DummyFTPServer::Configuration::loadConfiguration" ref="a6036c6987189d51f882c43107db43c45" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Configuration::loadConfiguration </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Provede načtení konfiguračního souboru. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném načtení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00015_source.html#l00054">54</a> v souboru <a class="el" href="a00015_source.html">configuration.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00015_source.html#l00141">clean()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00034">DummyFTPServer::Core::loadConfiguration()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00003_a6036c6987189d51f882c43107db43c45_cgraph.png" border="0" usemap="#a00003_a6036c6987189d51f882c43107db43c45_cgraph_map" alt=""></div>
+<map name="a00003_a6036c6987189d51f882c43107db43c45_cgraph_map" id="a00003_a6036c6987189d51f882c43107db43c45_cgraph">
+<area shape="rect" id="node3" href="a00003.html#aaa780269028723cc035a787a05433a00" title="Provede vyprázdnění databáze." alt="" coords="405,5,677,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00003_a6036c6987189d51f882c43107db43c45_icgraph.png" border="0" usemap="#a00003_a6036c6987189d51f882c43107db43c45_icgraph_map" alt=""></div>
+<map name="a00003_a6036c6987189d51f882c43107db43c45_icgraph_map" id="a00003_a6036c6987189d51f882c43107db43c45_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="407,5,700,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00016_source.html">configuration.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00015_source.html">configuration.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:45 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

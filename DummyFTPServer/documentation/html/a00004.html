@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::ConfSection</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00004.html">ConfSection</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::ConfSection</h1><!-- doxytag: class="DummyFTPServer::ConfSection" -->
+<p>Objekt reprezentující jednu sekci databáze nastavení.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00018_source.html">confsection.h</a>&gt;</code></p>
+
+<p><a href="a00063.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a451073ee884398245eed6e063ece43f4">ConfSection</a> (std::string name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří objekty, které reprezentují sekce.  <a href="#a451073ee884398245eed6e063ece43f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a379f3ccf6327701a92a263c5cc36ee2a">getName</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání jména sekce.  <a href="#a379f3ccf6327701a92a263c5cc36ee2a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a011608c39dd49413cf4486766af8578d">getCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání počtu položek.  <a href="#a011608c39dd49413cf4486766af8578d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a91d0c6b14e9ca84f24a69dc5393cf0fb">getValue</a> (std::string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání hodnoty.  <a href="#a91d0c6b14e9ca84f24a69dc5393cf0fb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a3ca15d45293c73df2e24484a790e3082">append</a> (std::string key, std::string value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k přidání položky.  <a href="#a3ca15d45293c73df2e24484a790e3082"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a8b245d6d034a41db27f97b1421d32aec">remove</a> (std::string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k smazání položky podle klíče.  <a href="#a8b245d6d034a41db27f97b1421d32aec"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Objekt reprezentující jednu sekci databáze nastavení. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00018_source.html#l00036">36</a> v souboru <a class="el" href="a00018_source.html">confsection.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="a451073ee884398245eed6e063ece43f4"></a><!-- doxytag: member="DummyFTPServer::ConfSection::ConfSection" ref="a451073ee884398245eed6e063ece43f4" args="(std::string name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::ConfSection::ConfSection </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří objekty, které reprezentují sekce. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Nastavuje název sekce. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00028">28</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="a3ca15d45293c73df2e24484a790e3082"></a><!-- doxytag: member="DummyFTPServer::ConfSection::append" ref="a3ca15d45293c73df2e24484a790e3082" args="(std::string key, std::string value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::ConfSection::append </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k přidání položky. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Nastaví klíč. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>Nastaví hodnotu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném přidání, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00051">51</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00015_source.html#l00039">DummyFTPServer::Configuration::appendToSection()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00004_a3ca15d45293c73df2e24484a790e3082_icgraph.png" border="0" usemap="#a00004_a3ca15d45293c73df2e24484a790e3082_icgraph_map" alt=""></div>
+<map name="a00004_a3ca15d45293c73df2e24484a790e3082_icgraph_map" id="a00004_a3ca15d45293c73df2e24484a790e3082_icgraph">
+<area shape="rect" id="node3" href="a00003.html#ad086bb5097ed23bc87995ce71eb85c4a" title="Metoda sloužící k přidávání hodnot do sekcí. Pokud není vybrána žádná..." alt="" coords="333,5,680,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a011608c39dd49413cf4486766af8578d"></a><!-- doxytag: member="DummyFTPServer::ConfSection::getCount" ref="a011608c39dd49413cf4486766af8578d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DummyFTPServer::ConfSection::getCount </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání počtu položek. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací počet položek v sekci. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00036">36</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a379f3ccf6327701a92a263c5cc36ee2a"></a><!-- doxytag: member="DummyFTPServer::ConfSection::getName" ref="a379f3ccf6327701a92a263c5cc36ee2a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DummyFTPServer::ConfSection::getName </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání jména sekce. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací název sekce. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00032">32</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91d0c6b14e9ca84f24a69dc5393cf0fb"></a><!-- doxytag: member="DummyFTPServer::ConfSection::getValue" ref="a91d0c6b14e9ca84f24a69dc5393cf0fb" args="(std::string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DummyFTPServer::ConfSection::getValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání hodnoty. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací hodnotu podle hledaného klíče. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00040">40</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00091">DummyFTPServer::Core::getSettingsValue()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00004_a91d0c6b14e9ca84f24a69dc5393cf0fb_icgraph.png" border="0" usemap="#a00004_a91d0c6b14e9ca84f24a69dc5393cf0fb_icgraph_map" alt=""></div>
+<map name="a00004_a91d0c6b14e9ca84f24a69dc5393cf0fb_icgraph_map" id="a00004_a91d0c6b14e9ca84f24a69dc5393cf0fb_icgraph">
+<area shape="rect" id="node3" href="a00005.html#aff315e73e2cf8a201f98877e4495bb58" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="343,5,633,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b245d6d034a41db27f97b1421d32aec"></a><!-- doxytag: member="DummyFTPServer::ConfSection::remove" ref="a8b245d6d034a41db27f97b1421d32aec" args="(std::string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::ConfSection::remove </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k smazání položky podle klíče. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Nastaví klíč. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném smazání, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00017_source.html#l00057">57</a> v souboru <a class="el" href="a00017_source.html">confsection.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00018_source.html">confsection.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00017_source.html">confsection.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:45 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

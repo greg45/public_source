@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::FTPServer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00011.html">FTPServer</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::FTPServer</h1><!-- doxytag: class="DummyFTPServer::FTPServer" -->
+<p>Třída reprezentuje FTP server.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00031_source.html">ftpserver.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram tříd pro DummyFTPServer::FTPServer:</div>
+<div class="dynsection">
+<div class="center"><img src="a00079.png" border="0" usemap="#DummyFTPServer_1_1FTPServer_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">vysvětlivky</a>]</span></center></div>
+
+<p><a href="a00080.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné sloty</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18cb04d108216fbe219b1bcb20b776a3"></a><!-- doxytag: member="DummyFTPServer::FTPServer::addConnection" ref="a18cb04d108216fbe219b1bcb20b776a3" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a18cb04d108216fbe219b1bcb20b776a3">addConnection</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tento slot obsluhuje nová spojení. <br/></td></tr>
+<tr><td colspan="2"><h2>Signály</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52520034f1e234f5059f7701d25ae7b9"></a><!-- doxytag: member="DummyFTPServer::FTPServer::closing" ref="a52520034f1e234f5059f7701d25ae7b9" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a52520034f1e234f5059f7701d25ae7b9">closing</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signalizuje ukončení naslouchání. <br/></td></tr>
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a60c220afbdf0ed541520566100da7cc1">FTPServer</a> (unsigned int tcpPort, QObject *parent=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří objekt, který reprezentuje FTP server.  <a href="#a60c220afbdf0ed541520566100da7cc1"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Statické veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71e1c2b300af36143f25e00ad246bd49"></a><!-- doxytag: member="DummyFTPServer::FTPServer::getPort" ref="a71e1c2b300af36143f25e00ad246bd49" args="()" -->
+static unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a71e1c2b300af36143f25e00ad246bd49">getPort</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání nastaveného portu. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#aa17ea13040d2135582236eabd52e2e46">start</a> (unsigned int tcpPort)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zapne server.  <a href="#aa17ea13040d2135582236eabd52e2e46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a517698160d59d633249272f4dfb00c73"></a><!-- doxytag: member="DummyFTPServer::FTPServer::stop" ref="a517698160d59d633249272f4dfb00c73" args="()" -->
+static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a517698160d59d633249272f4dfb00c73">stop</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zastaví server. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a042fb8f8576f975696eb7a9e1b93a6"></a><!-- doxytag: member="DummyFTPServer::FTPServer::restart" ref="a2a042fb8f8576f975696eb7a9e1b93a6" args="()" -->
+static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a2a042fb8f8576f975696eb7a9e1b93a6">restart</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provede restart serveru. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a018a16eb495fd51068c4a1cd4f9b988c"></a><!-- doxytag: member="DummyFTPServer::FTPServer::isRunning" ref="a018a16eb495fd51068c4a1cd4f9b988c" args="()" -->
+static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a018a16eb495fd51068c4a1cd4f9b988c">isRunning</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zjistí stav serveru. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Třída reprezentuje FTP server. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00031_source.html#l00038">38</a> v souboru <a class="el" href="a00031_source.html">ftpserver.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="a60c220afbdf0ed541520566100da7cc1"></a><!-- doxytag: member="DummyFTPServer::FTPServer::FTPServer" ref="a60c220afbdf0ed541520566100da7cc1" args="(unsigned int tcpPort, QObject *parent=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::FTPServer::FTPServer </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>tcpPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&nbsp;</td>
+          <td class="paramname"> <em>parent</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří objekt, který reprezentuje FTP server. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tcpPort</em>&nbsp;</td><td>Nastaví port na, kterém bude ftp server poslouchat. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>parent</em>&nbsp;</td><td>Ukazatel na předka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00030_source.html#l00054">54</a> v souboru <a class="el" href="a00030_source.html">ftpserver.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00030_source.html#l00086">addConnection()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00030_source.html#l00031">start()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00011_a60c220afbdf0ed541520566100da7cc1_cgraph.png" border="0" usemap="#a00011_a60c220afbdf0ed541520566100da7cc1_cgraph_map" alt=""></div>
+<map name="a00011_a60c220afbdf0ed541520566100da7cc1_cgraph_map" id="a00011_a60c220afbdf0ed541520566100da7cc1_cgraph">
+<area shape="rect" id="node3" href="a00011.html#a18cb04d108216fbe219b1bcb20b776a3" title="Tento slot obsluhuje nová spojení." alt="" coords="337,5,649,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00011_a60c220afbdf0ed541520566100da7cc1_icgraph.png" border="0" usemap="#a00011_a60c220afbdf0ed541520566100da7cc1_icgraph_map" alt=""></div>
+<map name="a00011_a60c220afbdf0ed541520566100da7cc1_icgraph_map" id="a00011_a60c220afbdf0ed541520566100da7cc1_icgraph">
+<area shape="rect" id="node3" href="a00011.html#aa17ea13040d2135582236eabd52e2e46" title="Zapne server." alt="" coords="337,32,583,61"/><area shape="rect" id="node5" href="a00011.html#a2a042fb8f8576f975696eb7a9e1b93a6" title="Provede restart serveru." alt="" coords="633,5,892,35"/><area shape="rect" id="node7" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="636,59,889,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="aa17ea13040d2135582236eabd52e2e46"></a><!-- doxytag: member="DummyFTPServer::FTPServer::start" ref="aa17ea13040d2135582236eabd52e2e46" args="(unsigned int tcpPort)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DummyFTPServer::FTPServer::start </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>tcpPort</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Zapne server. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tcpPort</em>&nbsp;</td><td>Nastaví port na, kterém bude ftp server poslouchat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00030_source.html#l00031">31</a> v souboru <a class="el" href="a00030_source.html">ftpserver.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00030_source.html#l00054">FTPServer()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00030_source.html#l00043">restart()</a> a <a class="el" href="a00019_source.html#l00058">DummyFTPServer::Core::startServer()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00011_aa17ea13040d2135582236eabd52e2e46_cgraph.png" border="0" usemap="#a00011_aa17ea13040d2135582236eabd52e2e46_cgraph_map" alt=""></div>
+<map name="a00011_aa17ea13040d2135582236eabd52e2e46_cgraph_map" id="a00011_aa17ea13040d2135582236eabd52e2e46_cgraph">
+<area shape="rect" id="node3" href="a00011.html#a60c220afbdf0ed541520566100da7cc1" title="Vytváří objekt, který reprezentuje FTP server." alt="" coords="303,5,583,35"/><area shape="rect" id="node5" href="a00011.html#a18cb04d108216fbe219b1bcb20b776a3" title="Tento slot obsluhuje nová spojení." alt="" coords="633,5,945,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00011_aa17ea13040d2135582236eabd52e2e46_icgraph.png" border="0" usemap="#a00011_aa17ea13040d2135582236eabd52e2e46_icgraph_map" alt=""></div>
+<map name="a00011_aa17ea13040d2135582236eabd52e2e46_icgraph_map" id="a00011_aa17ea13040d2135582236eabd52e2e46_icgraph">
+<area shape="rect" id="node3" href="a00011.html#a2a042fb8f8576f975696eb7a9e1b93a6" title="Provede restart serveru." alt="" coords="303,5,561,35"/><area shape="rect" id="node5" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="305,59,559,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00031_source.html">ftpserver.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00030_source.html">ftpserver.cpp</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00039_source.html">moc_ftpserver.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:52 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/***************************************************************************
+ *   Copyright (C) 2010 by Marek Hakala   *
+ *   marek@hakala.cz   *
+ *
+ *   Semestrální práce PA2 - ČVUT FIT
+ *   Téma : Implementace FTP serveru
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
+#ifndef LISTENERTHREAD_H
+#define LISTENERTHREAD_H
+
+#include <iostream>
+#include <iomanip>
+#include <list>
+
+#include <QObject>
+#include <QTcpServer>
+#include <QTcpSocket>
+#include <QHostAddress>
+#include <QDateTime>
+#include <QPointer>
+
+#include "core.h"
+#include "user.h"
+#include "workpath.h"
+#include "passwordtype.h"
+
+using DummyFTPServer::WorkPath;
+using DummyFTPServer::AccountManager::User;
+using DummyFTPServer::AccountManager::PasswordType;
+
+namespace DummyFTPServer {
+
+    /*! \class ServerThread
+     *  \brief Objekt reprezentující serverové vlákno.
+     */
+    class ServerThread : public QObject {
+        Q_OBJECT
+
+        friend class FTPCommand;
+        friend class FTPCommandLIST;
+        friend class FTPCommandRETR;
+        friend class FTPCommandSTOR;
+
+    public:
+        /*! \fn ServerThread(QTcpSocket *_socket, QObject *parent = 0)
+         *  \brief Vytváří serverové vlákno.
+         */
+        ServerThread(QTcpSocket *_socket, QObject *parent = 0);
+        virtual ~ServerThread();
+
+        /*! \enum MODE_DTP
+         *  \brief Výpočetní typ, který definuje podporované typy přenosů. (Data Transfer Process)
+         */
+        enum MODE_DTP {
+            NONE, STOR, RETR, APPE
+        };
+
+        /*! \fn bool isConnected()
+         *  \brief Vrací pravdu pokud spojení stálé trvá, v opačném případě nepravdu.
+         */
+        bool isConnected() {
+            if (socket && ((socket->state() == QTcpSocket::ConnectingState)
+                    || (socket->state() == QTcpSocket::ConnectedState)))
+                return true;
+            return false;
+        }
+
+        /*! \fn MODE_DTP getMode()
+         *  \brief Vrací aktuální typ přenosového režimu.
+         */
+        MODE_DTP getMode() {
+            return this->mode;
+        }
+
+        /*! \fn User *getUser()
+         *  \brief Vrací ukazatel na uživatele, který je v daném vláknu obsluhován.
+         */
+        User *getUser() {
+            return loggedUser;
+        }
+
+        /*! \fn std::string getFileName()
+         *  \brief Vrací název pracovního souboru.
+         */
+        std::string getFileName() {
+            return fileName.toStdString();
+        }
+
+        /*! \fn std::string getAddress()
+         *  \brief Vrací adresu vzdáleného klienta.
+         */
+        std::string getAddress() {
+            return (socket->peerAddress().toString()).toStdString();
+        }
+
+    signals:
+        /*! \fn void connectedDTP()
+         *  \brief Signalizuje spojení s DTP. (Data Transfer Process)
+         */
+        void connectedDTP();
+
+    public slots:
+        /*! \fn void parseCommand()
+         *  \brief Metoda, která zpracovává příchozí požadavky.
+         */
+        void parseCommand();
+
+        /*! \fn void list()
+         *  \brief Metoda, která zajišťuje zpracování seznamu souboru a zaslání do socketu.
+         */
+        void list();
+
+        /*! \fn void stopDTP()
+         *  \brief Zastaví DTP.
+         */
+        void stopDTP();
+
+        /*! \fn void errorDTP()
+         *  \brief Obsluhuje chyby okolo DTP.
+         */
+        void errorDTP();
+
+        /*! \fn void portConnection()
+         *  \brief Obsluhuje spojení.
+         */
+        void portConnection();
+
+        /*! \fn void pasvConnection()
+         *  \brief Obsluhuje pasivní spojení.
+         */
+        void pasvConnection();
+
+        /*! \fn void welcomeMessage()
+         *  \brief Zasílá do soketu úplné první zprávu a to uvítací.
+         */
+        void welcomeMessage();
+
+    protected:
+        /*! \fn bool sendMessage(const QString &commandCode, const QString &message)
+         *  \brief Metoda, která posílá FTP zprávy do TCP socketu.
+         *  \param commandCode Číslo ftp příkazu.
+         *  \param message Textová zpráva, která bude poslána klientovy.
+         */
+        bool sendMessage(const QString &commandCode, const QString &message);
+
+        /*! \fn void openPassive()
+         *  \brief Metoda, která zapíná pasivní komunikační režim.
+         */
+        void openPassive();
+
+    private:
+
+        /*! \var validUsername
+         *  \brief Příznak existujícího uživatelského jména.
+         */
+        bool validUsername;
+
+        /*! \var validPassword
+         *  \brief Příznak správně zadaného uživatelského hesla.
+         */
+        bool validPassword;
+
+        /*! \var isLogged
+         *  \brief Příznak řádné autorizace.
+         */
+        bool isLogged;
+
+        /*! \var flagWaitForDTP
+         *  \brief Příznak čekání na DTP.
+         */
+        bool flagWaitForDTP;
+
+        /*! \var fileName
+         *  \brief Název souboru.
+         */
+        QString fileName;
+
+        /*! \var globalCommand
+         *  \brief FTP příkaz.
+         */
+        QString globalCommand;
+
+        /*! \var rnfrNameCache
+         *  \brief Uchovává jméno souboru, který bude přejmenován.
+         */
+        QString rnfrNameCache;
+
+        /*! \var socket
+         *  \brief Hlavní kontrolní socket.
+         */
+        QPointer<QTcpSocket> socket;
+
+        /*! \var passvSocket
+         *  \brief Socket pro pasivní komunikaci. (DATA)
+         */
+        QPointer<QTcpSocket> passvSocket;
+
+        /*! \var server
+         *  \brief Spravuje TCP spojení.
+         */
+        QPointer<QTcpServer> server;
+
+        /*! \var pathPtr
+         *  \brief Zajišťuje práci, ze soubory a adresáři.
+         */
+        WorkPath *pathPtr;
+
+        /*! \var loggedUser
+         *  \brief Ukazatel na uživatele, který je v daném vláknu obsluhován.
+         */
+        User *loggedUser;
+
+        /*! \var mode
+         *  \brief Typ přenosového režimu.
+         */
+        MODE_DTP mode;
+
+        /*! \var listCommand
+         *  \brief Ukazatel na objekt, který obsluhuje ftp příkaz LIST.
+         */
+        QPointer<QObject> listCommand;
+
+        /*! \var retrCommand
+         *  \brief Ukazatel na objekt, který obsluhuje ftp příkaz RETR.
+         */
+        QPointer<QObject> retrCommand;
+
+        /*! \var storCommand
+         *  \brief Ukazatel na objekt, který obsluhuje ftp příkaz STOR.
+         */
+        QPointer<QObject> storCommand;
+
+        /*! \var transferContinueFrom
+         *  \brief Proměnná, která určuje pokračování v přenosu.
+         */
+        quint64 transferContinueFrom;
+    };
+
+}
+
+#endif // LISTENERTHREAD_H

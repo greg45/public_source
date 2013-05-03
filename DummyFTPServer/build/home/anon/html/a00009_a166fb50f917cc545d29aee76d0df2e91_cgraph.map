@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00009.html#a35ba15a02a83c4b02f0d8b9803043b12" title="Slot, který obsluhuje chybové stavy." alt="" coords="832,60,1136,89"/>
+<area shape="rect" id="node7" href="$a00012.html#ab22a9cdb6fbb8793f88d54b3be5b33f4" title="Metoda, která posílá FTP zprávy do TCP socketu." alt="" coords="1185,112,1511,141"/>
+<area shape="rect" id="node13" href="$a00009.html#ad5cd8527934dbb8e21545a8f00f65138" title="Slot, který při zavolání naplní socket daty." alt="" coords="449,8,783,37"/>
+<area shape="rect" id="node5" href="$a00007.html#abe1c80c2c432d550ac410bba54c8b6d6" title="Signalizuje dokončení." alt="" coords="1203,59,1493,88"/>
+<area shape="rect" id="node9" href="$a00012.html#a61eb44b800056cdc1dd6c51c7d77599d" title="Zastaví DTP." alt="" coords="1203,5,1493,35"/>
+<area shape="rect" id="node11" href="$a00012.html#a1ab378600610c7bff0998ec006b9a629" title="Signalizuje spojení s DTP. (Data Transfer Process)." alt="" coords="1560,5,1891,35"/>
+<area shape="rect" id="node15" href="$a00007.html#a3f25649639cd596edfb16631adfdc7b8" title="Dokončuje přenos a uzavírá spojení." alt="" coords="837,7,1131,36"/>
+</map>

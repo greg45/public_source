@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00002.html#ac727c0d3f27c5c8be672ac5380fc77fa" title="Smaže celý seznam uživatel." alt="" coords="469,112,824,141"/>
+<area shape="rect" id="node5" href="$a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="453,165,840,195"/>
+<area shape="rect" id="node7" href="$a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="924,59,1268,88"/>
+<area shape="rect" id="node15" href="$a00001.html#a79e422479421f40cdc2f12f880b31ab5" title="Třídní metoda provádějící kontrolu existence cesty." alt="" coords="913,112,1279,141"/>
+<area shape="rect" id="node19" href="$a00002.html#a410e24922f6077bce1d33bfb7d907f98" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="888,165,1304,195"/>
+<area shape="rect" id="node21" href="$a00005.html#a41656f64db5d97e5c2d6e5923058e126" title="Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného..." alt="" coords="992,219,1200,248"/>
+<area shape="rect" id="node23" href="$a00005.html#a55048e8e9a1e5f23e3769582a06748b4" title="Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu..." alt="" coords="967,272,1225,301"/>
+<area shape="rect" id="node9" href="$a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="1375,5,1748,35"/>
+<area shape="rect" id="node13" href="$a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="1368,59,1755,88"/>
+<area shape="rect" id="node11" href="$a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="1820,5,2244,35"/>
+<area shape="rect" id="node17" href="$a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="1353,112,1769,141"/>
+</map>

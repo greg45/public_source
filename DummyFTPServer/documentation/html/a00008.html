@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::FTPCommandLIST</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00008.html">FTPCommandLIST</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::FTPCommandLIST</h1><!-- doxytag: class="DummyFTPServer::FTPCommandLIST" --><!-- doxytag: inherits="DummyFTPServer::FTPCommand" -->
+<p>Zajišťuje obsluhu FTP příkazu LIST.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00025_source.html">ftpcommandlist.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dědičnosti pro třídu DummyFTPServer::FTPCommandLIST</div>
+<div class="dynsection">
+<div class="center"><img src="a00070.png" border="0" usemap="#DummyFTPServer_1_1FTPCommandLIST_inherit__map" alt="Inheritance graph"/></div>
+<map name="DummyFTPServer_1_1FTPCommandLIST_inherit__map" id="DummyFTPServer_1_1FTPCommandLIST_inherit__map">
+<area shape="rect" id="node2" href="a00007.html" title="Zajišťuje obsluhu FTP příkazu (Abstraktní třída)." alt="" coords="17,5,252,229"/></map>
+<center><span class="legend">[<a href="graph_legend.html">vysvětlivky</a>]</span></center></div>
+<div class="dynheader">
+Diagram tříd pro DummyFTPServer::FTPCommandLIST:</div>
+<div class="dynsection">
+<div class="center"><img src="a00071.png" border="0" usemap="#DummyFTPServer_1_1FTPCommandLIST_coll__map" alt="Collaboration graph"/></div>
+<map name="DummyFTPServer_1_1FTPCommandLIST_coll__map" id="DummyFTPServer_1_1FTPCommandLIST_coll__map">
+<area shape="rect" id="node2" href="a00007.html" title="Zajišťuje obsluhu FTP příkazu (Abstraktní třída)." alt="" coords="168,1109,403,1333"/><area shape="rect" id="node4" href="a00012.html" title="Objekt reprezentující serverové vlákno." alt="" coords="171,419,400,1042"/><area shape="rect" id="node6" href="a00001.html" title="Třída reprezentující uživatele." alt="" coords="5,49,296,308"/><area shape="rect" id="node8" href="a00013.html" title="Třídá provádí veškerou práci, ze soubory a adresáři od načítání obsahu..." alt="" coords="320,6,523,351"/></map>
+<center><span class="legend">[<a href="graph_legend.html">vysvětlivky</a>]</span></center></div>
+
+<p><a href="a00072.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné sloty</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9e119efd9a66c85ad39cf94bbe7b8f1"></a><!-- doxytag: member="DummyFTPServer::FTPCommandLIST::sendData" ref="aa9e119efd9a66c85ad39cf94bbe7b8f1" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#aa9e119efd9a66c85ad39cf94bbe7b8f1">sendData</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slot, který při zavolání naplní socket daty. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ad62f1b847765d576975da127887a12"></a><!-- doxytag: member="DummyFTPServer::FTPCommandLIST::error" ref="a9ad62f1b847765d576975da127887a12" args="(bool stop=true)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#a9ad62f1b847765d576975da127887a12">error</a> (bool stop=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slot, který obsluhuje chybové stavy. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a911e7754922e185ce750669cae447294"></a><!-- doxytag: member="DummyFTPServer::FTPCommandLIST::finishing" ref="a911e7754922e185ce750669cae447294" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#a911e7754922e185ce750669cae447294">finishing</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dokončuje přenos a uzavírá spojení. <br/></td></tr>
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#aab148b9e6020b827dc4fa2573d66ea41">FTPCommandLIST</a> (<a class="el" href="a00012.html">ServerThread</a> *parent)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří objekt pro zpracování FTP příkaz LIST.  <a href="#aab148b9e6020b827dc4fa2573d66ea41"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Chráněné atributy</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb3344d7129adff0868f0ec0adc64ead"></a><!-- doxytag: member="DummyFTPServer::FTPCommandLIST::list" ref="acb3344d7129adff0868f0ec0adc64ead" args="" -->
+QList&lt; QByteArray &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#acb3344d7129adff0868f0ec0adc64ead">list</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Seznam položek v aktuálním adresáři. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Zajišťuje obsluhu FTP příkazu LIST. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00025_source.html#l00035">35</a> v souboru <a class="el" href="a00025_source.html">ftpcommandlist.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="aab148b9e6020b827dc4fa2573d66ea41"></a><!-- doxytag: member="DummyFTPServer::FTPCommandLIST::FTPCommandLIST" ref="aab148b9e6020b827dc4fa2573d66ea41" args="(ServerThread *parent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::FTPCommandLIST::FTPCommandLIST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00012.html">ServerThread</a> *&nbsp;</td>
+          <td class="paramname"> <em>parent</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří objekt pro zpracování FTP příkaz LIST. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>parent</em>&nbsp;</td><td>Ukazatel na předka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00024_source.html#l00027">27</a> v souboru <a class="el" href="a00024_source.html">ftpcommandlist.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00024_source.html#l00065">error()</a>, <a class="el" href="a00023_source.html#l00070">DummyFTPServer::FTPCommand::isConnected</a>, <a class="el" href="a00025_source.html#l00050">list</a>, <a class="el" href="a00048_source.html#l00184">DummyFTPServer::WorkPath::list()</a>, <a class="el" href="a00024_source.html#l00044">sendData()</a> a <a class="el" href="a00042_source.html#l00384">DummyFTPServer::ServerThread::sendMessage()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00008_aab148b9e6020b827dc4fa2573d66ea41_cgraph.png" border="0" usemap="#a00008_aab148b9e6020b827dc4fa2573d66ea41_cgraph_map" alt=""></div>
+<map name="a00008_aab148b9e6020b827dc4fa2573d66ea41_cgraph_map" id="a00008_aab148b9e6020b827dc4fa2573d66ea41_cgraph">
+<area shape="rect" id="node3" href="a00008.html#a9ad62f1b847765d576975da127887a12" title="Slot, který obsluhuje chybové stavy." alt="" coords="827,7,1125,36"/><area shape="rect" id="node7" href="a00012.html#ab22a9cdb6fbb8793f88d54b3be5b33f4" title="Metoda, která posílá FTP zprávy do TCP socketu." alt="" coords="1185,112,1511,141"/><area shape="rect" id="node13" href="a00013.html#aec34e5a2393931087615a71cf2d89922" title="Seznam souborů." alt="" coords="488,191,717,220"/><area shape="rect" id="node21" href="a00008.html#aa9e119efd9a66c85ad39cf94bbe7b8f1" title="Slot, který při zavolání naplní socket daty." alt="" coords="439,60,767,89"/><area shape="rect" id="node5" href="a00007.html#abe1c80c2c432d550ac410bba54c8b6d6" title="Signalizuje dokončení." alt="" coords="1203,59,1493,88"/><area shape="rect" id="node9" href="a00012.html#a61eb44b800056cdc1dd6c51c7d77599d" title="Zastaví DTP." alt="" coords="1203,5,1493,35"/><area shape="rect" id="node11" href="a00012.html#a1ab378600610c7bff0998ec006b9a629" title="Signalizuje spojení s DTP. (Data Transfer Process)." alt="" coords="1560,5,1891,35"/><area shape="rect" id="node15" href="a00013.html#a1df62de90d6e4fedf45112b7dc30ea50" title="Slouží k získání skupiny." alt="" coords="841,164,1111,193"/><area shape="rect" id="node17" href="a00013.html#aa982eed48e92b9f2e98fdf22b3393d23" title="Slouží k získání vlastníka." alt="" coords="840,217,1112,247"/><area shape="rect" id="node19" href="a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="845,271,1107,300"/><area shape="rect" id="node23" href="a00008.html#a911e7754922e185ce750669cae447294" title="Dokončuje přenos a uzavírá spojení." alt="" coords="817,60,1135,89"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00025_source.html">ftpcommandlist.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00024_source.html">ftpcommandlist.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:49 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

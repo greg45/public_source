@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00005.html#a094f646294adcdd42c2b30a3bdf79a76" title="Metoda slouží k získaní domovského adresáře uživatele anonymous." alt="" coords="348,5,665,35"/>
+<area shape="rect" id="node5" href="$a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="360,59,653,88"/>
+<area shape="rect" id="node7" href="$a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="380,112,633,141"/>
+</map>

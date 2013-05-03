@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::AccountManager::User</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<b>AccountManager</b>::<a class="el" href="a00001.html">User</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::AccountManager::User</h1><!-- doxytag: class="DummyFTPServer::AccountManager::User" -->
+<p>Třída reprezentující uživatele.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00045_source.html">user.h</a>&gt;</code></p>
+
+<p><a href="a00084.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a7653ddf18d5024cd5c78e97daa507772">User</a> (std::string username, std::string password, PasswordType format, std::string homeDirectory)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří objekty reprezentující uživatele.  <a href="#a7653ddf18d5024cd5c78e97daa507772"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a982c53762c36723af38cdd36bf34e3fb"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::getUsername" ref="a982c53762c36723af38cdd36bf34e3fb" args="() const " -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb">getUsername</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda vrací uživatelské jméno. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43a13176ce65c3e30d180a484ca1aed0"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::getHomeDirectory" ref="a43a13176ce65c3e30d180a484ca1aed0" args="() const " -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a43a13176ce65c3e30d180a484ca1aed0">getHomeDirectory</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda vrací cestu k domovskému adresáři. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a5daac8486a513c1205f5e1e868a3796b">checkPassword</a> (std::string password, PasswordType format) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda provádí porovnání hesel.  <a href="#a5daac8486a513c1205f5e1e868a3796b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a79e422479421f40cdc2f12f880b31ab5">isValidPath</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Třídní metoda provádějící kontrolu existence cesty.  <a href="#a79e422479421f40cdc2f12f880b31ab5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#aae3e5bed5917859cead262c2915f540c">operator==</a> (const <a class="el" href="a00001.html">User</a> &amp;u) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Přetížený operátor provnání. Slouží k porovnání hesel dvou uživatelských objektů.  <a href="#aae3e5bed5917859cead262c2915f540c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#ab1c4a0fe6737b26c72a564f071afca7f">operator!=</a> (const <a class="el" href="a00001.html">User</a> &amp;u) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Přetížený operátor porovnání. Slouží k porovnání hesel dvou uživatelských objektů.  <a href="#ab1c4a0fe6737b26c72a564f071afca7f"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Statické veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a0ece1836fcb1e28fec63d65611988edf">isValidPath</a> (const QString &amp;path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Netřídní metoda provádějící kontrolu existence cesty.  <a href="#a0ece1836fcb1e28fec63d65611988edf"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Třída reprezentující uživatele. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00045_source.html#l00043">43</a> v souboru <a class="el" href="a00045_source.html">user.h</a>.</p>
+<hr/><h2>Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="a7653ddf18d5024cd5c78e97daa507772"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::User" ref="a7653ddf18d5024cd5c78e97daa507772" args="(std::string username, std::string password, PasswordType format, std::string homeDirectory)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::AccountManager::User::User </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PasswordType&nbsp;</td>
+          <td class="paramname"> <em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>homeDirectory</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vytváří objekty reprezentující uživatele. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>username</em>&nbsp;</td><td>Uživatelské jméno </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>password</em>&nbsp;</td><td>Heslo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>Formát hesla </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>homeDirectory</em>&nbsp;</td><td>Domovský adresář </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00029">29</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="a5daac8486a513c1205f5e1e868a3796b"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::checkPassword" ref="a5daac8486a513c1205f5e1e868a3796b" args="(std::string password, PasswordType format) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::User::checkPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PasswordType&nbsp;</td>
+          <td class="paramname"> <em>format</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda provádí porovnání hesel. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>password</em>&nbsp;</td><td>Vstupní heslo. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>Formát vstupního hesla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při shodě hesel, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00047">47</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00044_source.html#l00088">operator==()</a> a <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00001_a5daac8486a513c1205f5e1e868a3796b_icgraph.png" border="0" usemap="#a00001_a5daac8486a513c1205f5e1e868a3796b_icgraph_map" alt=""></div>
+<map name="a00001_a5daac8486a513c1205f5e1e868a3796b_icgraph_map" id="a00001_a5daac8486a513c1205f5e1e868a3796b_icgraph">
+<area shape="rect" id="node3" href="a00001.html#aae3e5bed5917859cead262c2915f540c" title="Přetížený operátor provnání. Slouží k porovnání hesel dvou uživatelských..." alt="" coords="448,5,824,35"/><area shape="rect" id="node5" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="465,59,807,88"/><area shape="rect" id="node7" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="872,59,1197,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ece1836fcb1e28fec63d65611988edf"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::isValidPath" ref="a0ece1836fcb1e28fec63d65611988edf" args="(const QString &amp;path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::User::isValidPath </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Netřídní metoda provádějící kontrolu existence cesty. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Nastaví cestu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00082">82</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79e422479421f40cdc2f12f880b31ab5"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::isValidPath" ref="a79e422479421f40cdc2f12f880b31ab5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::User::isValidPath </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Třídní metoda provádějící kontrolu existence cesty. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšné validaci cesty, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00077">77</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00044_source.html#l00043">getHomeDirectory()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00094">DummyFTPServer::AccountManager::UserList::parseUser()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00001_a79e422479421f40cdc2f12f880b31ab5_cgraph.png" border="0" usemap="#a00001_a79e422479421f40cdc2f12f880b31ab5_cgraph_map" alt=""></div>
+<map name="a00001_a79e422479421f40cdc2f12f880b31ab5_cgraph_map" id="a00001_a79e422479421f40cdc2f12f880b31ab5_cgraph">
+<area shape="rect" id="node3" href="a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="423,5,839,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00001_a79e422479421f40cdc2f12f880b31ab5_icgraph.png" border="0" usemap="#a00001_a79e422479421f40cdc2f12f880b31ab5_icgraph_map" alt=""></div>
+<map name="a00001_a79e422479421f40cdc2f12f880b31ab5_icgraph_map" id="a00001_a79e422479421f40cdc2f12f880b31ab5_icgraph">
+<area shape="rect" id="node3" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="421,5,808,35"/><area shape="rect" id="node5" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="856,5,1256,35"/><area shape="rect" id="node7" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1305,5,1599,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1c4a0fe6737b26c72a564f071afca7f"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::operator!=" ref="ab1c4a0fe6737b26c72a564f071afca7f" args="(const User &amp;u) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::User::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00001.html">User</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>u</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Přetížený operátor porovnání. Slouží k porovnání hesel dvou uživatelských objektů. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>u</em>&nbsp;</td><td>Vstupní uživatelský objekt. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací nepravdu při shodě hesel, v opačném případě pravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00094">94</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae3e5bed5917859cead262c2915f540c"></a><!-- doxytag: member="DummyFTPServer::AccountManager::User::operator==" ref="aae3e5bed5917859cead262c2915f540c" args="(const User &amp;u) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::User::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00001.html">User</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>u</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Přetížený operátor provnání. Slouží k porovnání hesel dvou uživatelských objektů. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>u</em>&nbsp;</td><td>Vstupní uživatelský objekt. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při shodě hesel, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00044_source.html#l00088">88</a> v souboru <a class="el" href="a00044_source.html">user.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00044_source.html#l00047">checkPassword()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00001_aae3e5bed5917859cead262c2915f540c_cgraph.png" border="0" usemap="#a00001_aae3e5bed5917859cead262c2915f540c_cgraph_map" alt=""></div>
+<map name="a00001_aae3e5bed5917859cead262c2915f540c_cgraph_map" id="a00001_aae3e5bed5917859cead262c2915f540c_cgraph">
+<area shape="rect" id="node3" href="a00001.html#a5daac8486a513c1205f5e1e868a3796b" title="Metoda provádí porovnání hesel." alt="" coords="429,5,824,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00045_source.html">user.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00044_source.html">user.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:53 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

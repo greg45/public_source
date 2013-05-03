@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Zdrojový soubor /home/marek/Projekty/DummyFTPServer/source/ftpcommand.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Seznam&nbsp;souborů</span></a></li>
+    </ul>
+  </div>
+<h1>/home/marek/Projekty/DummyFTPServer/source/ftpcommand.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2010 by Marek Hakala   *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   marek@hakala.cz   *</span>
+<a name="l00004"></a>00004 <span class="comment"> *</span>
+<a name="l00005"></a>00005 <span class="comment"> *   Semestrální práce PA2 - ČVUT FIT</span>
+<a name="l00006"></a>00006 <span class="comment"> *   Téma : Implementace FTP serveru</span>
+<a name="l00007"></a>00007 <span class="comment"> *                                                                         *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00009"></a>00009 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00010"></a>00010 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00012"></a>00012 <span class="comment"> *                                                                         *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00014"></a>00014 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00015"></a>00015 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00017"></a>00017 <span class="comment"> *                                                                         *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00019"></a>00019 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00020"></a>00020 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00021"></a>00021 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00022"></a>00022 <span class="comment"> ***************************************************************************/</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="preprocessor">#ifndef FTPCOMMAND_H</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#define FTPCOMMAND_H</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;QObject&gt;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;QFile&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;QString&gt;</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;serverthread.h&quot;</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">using</span> <a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">DummyFTPServer::ServerThread</a>;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">namespace </span>DummyFTPServer {
+<a name="l00037"></a>00037 
+<a name="l00041"></a><a class="code" href="a00007.html">00041</a>     <span class="keyword">class </span><a class="code" href="a00007.html" title="Zajišťuje obsluhu FTP příkazu (Abstraktní třída).">FTPCommand</a> : <span class="keyword">public</span> QObject {
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         Q_OBJECT
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     <span class="keyword">public</span>:
+<a name="l00050"></a>00050         <a class="code" href="a00007.html#aede2d708f57fdbb8bb285702fc68e158" title="Vytváří objekt pro zpracování FTP příkazu.">FTPCommand</a>(<a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">ServerThread</a> *<a class="code" href="a00007.html#a00237fcdeafef90fbad5847ba221466b" title="Vrací ukazatel na serverové vlákno neboli na otcovský objekt.">parent</a> = 0);
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057         <a class="code" href="a00007.html#aede2d708f57fdbb8bb285702fc68e158" title="Vytváří objekt pro zpracování FTP příkazu.">FTPCommand</a>(<span class="keyword">const</span> QString &amp;fileName, <a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">ServerThread</a> *<a class="code" href="a00007.html#a00237fcdeafef90fbad5847ba221466b" title="Vrací ukazatel na serverové vlákno neboli na otcovský objekt.">parent</a> = 0);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="keyword">virtual</span> ~<a class="code" href="a00007.html" title="Zajišťuje obsluhu FTP příkazu (Abstraktní třída).">FTPCommand</a>() {}
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064         <span class="keyword">virtual</span> <a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">ServerThread</a> *<a class="code" href="a00007.html#a00237fcdeafef90fbad5847ba221466b" title="Vrací ukazatel na serverové vlákno neboli na otcovský objekt.">parent</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066     <span class="keyword">protected</span>:
+<a name="l00070"></a><a class="code" href="a00007.html#aef2bb9f1282e90393b75dc52d11db2aa">00070</a>         <span class="keywordtype">bool</span> <a class="code" href="a00007.html#aef2bb9f1282e90393b75dc52d11db2aa" title="Příznak aktivního spojení.">isConnected</a>;
+<a name="l00071"></a>00071 
+<a name="l00075"></a><a class="code" href="a00007.html#ac3464ea9ae9d9a042e97defd829ff569">00075</a>         QFile <a class="code" href="a00007.html#ac3464ea9ae9d9a042e97defd829ff569" title="Pracovní soubor.">file</a>;
+<a name="l00076"></a>00076 
+<a name="l00080"></a><a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5">00080</a>         <a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">ServerThread</a> *<a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082     <span class="keyword">public</span> slots:
+<a name="l00086"></a>00086         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00007.html#a47d03bc29f99a45e2f8da1de75fe9c6f" title="Slot, který při zavolání naplní socket daty.">sendData</a>() = 0;
+<a name="l00087"></a>00087 
+<a name="l00091"></a>00091         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00007.html#a3f25649639cd596edfb16631adfdc7b8" title="Dokončuje přenos a uzavírá spojení.">finishing</a>();
+<a name="l00092"></a>00092 
+<a name="l00096"></a>00096         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00007.html#a5edf959609cedf663bab044dee8ad1d0" title="Slot, který obsluhuje chybové stavy.">error</a>(<span class="keywordtype">bool</span> stop = <span class="keyword">true</span>);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098     signals:
+<a name="l00102"></a>00102         <span class="keywordtype">void</span> <a class="code" href="a00007.html#abe1c80c2c432d550ac410bba54c8b6d6" title="Signalizuje dokončení.">finished</a>();
+<a name="l00103"></a>00103     };
+<a name="l00104"></a>00104 }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="preprocessor">#endif // FTPCOMMAND_H</span>
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:43 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

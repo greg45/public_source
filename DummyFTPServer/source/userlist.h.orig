@@ -1,0 +1,137 @@
+/***************************************************************************
+ *   Copyright (C) 2010 by Marek Hakala   *
+ *   marek@hakala.cz   *
+ *
+ *   Semestrální práce PA2 - ČVUT FIT
+ *   Téma : Implementace FTP serveru
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
+#ifndef _USERLIST_H
+#define	_USERLIST_H
+
+#include <iostream>
+#include <algorithm>
+
+#include <list>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+#include "config.h"
+#include "user.h"
+
+namespace DummyFTPServer {
+    namespace AccountManager {
+
+        /*! \class UserList
+         *  \brief Třída sloužící jako databáze uživatel v paměti.
+         */
+        class UserList {
+        public:
+            /*! \fn UserList(std::string userListFile)
+             *  \brief Vytváří seznam uživatel.
+             */
+            UserList(std::string userListFile);
+            ~UserList();
+
+            /*! \fn User *getByUsername(std::string username)
+             *  \brief Slouží k získání ukazatele na uživatele.
+             *  \param username Nastaví jméno hledaného uživatele.
+             *  \return Vrací ukazatel na uživatele. Pokud uživatel neexistuje bude vrácen NULL pointer.
+             */
+            User *getByUsername(std::string username);
+
+            /*! \fn bool add(User *user)
+             *  \brief Slouží k přidávání uživatel do seznamu.
+             *  \param user Vstupní ukazatel na objekt uživatele.
+             *  \return Vrací pravdu při úspěšném přidání, v opačném případě nepravdu.
+             */
+            bool add(User *user);
+
+            /*! \fn bool remove(User *user)
+             *  \brief Slouží k odebrání uživatele ze seznamu.
+             *  \param user Vstupní ukazatel na objekt uživatele.
+             *  \return Vrací pravdu při úspěšném odebrání, v opačném případě nepravdu.
+             */
+            bool remove(User *user);
+
+            /*! \fn bool loadUserList()
+             *  \brief Slouží k načtení seznamu uživatel, ze souboru.
+             *  \return Vrací pravdu při úspěšném načtení, v opačném případě nepravdu.
+             */
+            bool loadUserList();
+
+            /*! \fn bool parseUser(std::string input)
+             *  \brief Slouží k načtení jednoho uživatele.
+             *  \param input Vstupní textový řetězec obsahující jeden uživatelský záznam.
+             *  \return Vrací pravdu při úspěšném načtení, v opačném případě nepravdu.
+             */
+            bool parseUser(std::string input);
+
+            /*! \fn bool parsePassword(std::string input, std::string *password, PasswordType *type)
+             *  \brief Slouží k načtení seznamu uživatel, ze souboru.
+             *  \param input Vstupní textový řetězec.
+             *  \param password Výstupní heslo.
+             *  \param type Formát výstupního hesla.
+             *  \return Vrací pravdu při úspěšném načtení, v opačném případě nepravdu.
+             */
+            bool parsePassword(std::string input, std::string *password, PasswordType *type);
+
+            /*! \fn bool contains(std::string username)
+             *  \brief Provádí kontrolu unikátnosti uživatelského jména.
+             */
+            bool contains(std::string username);
+
+            /*! \fn int count() const
+             *  \brief Slouží k zjištění počtu uživatel.
+             *  \return Vrací celkový počet uživatel v seznamu.
+             */
+            int count() const;
+
+            /*! \fn bool isEmpty() const
+             *  \brief Kontrola prázdnosti seznamu.
+             *  \return Vrací pravdu pokud je seznam prázdný, v opačném případě nepravdu.
+             */
+            bool isEmpty() const;
+
+            /*! \fn bool clean()
+             *  \brief Smaže celý seznam uživatel.
+             *  \return Vrací pravdu při úspěšném vyprázdnění, v opačném případě nepravdu.
+             */
+            bool clean();
+
+        private:
+            /*! \var userListPath
+             *  \brief Cesta k souboru, ze seznamem uživatel.
+             */
+            std::string userListPath;
+
+            /*! \var userListFile
+             *  \brief Soubor, ze seznamem uživatel.
+             */
+            std::fstream userListFile;
+
+            /*! \var userList
+             *  \brief Seznam uživatelů.
+             */
+            std::list<User *> userList;
+        };
+    }
+}
+
+#endif	/* _USERLIST_H */

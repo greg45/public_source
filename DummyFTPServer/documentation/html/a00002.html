@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::AccountManager::UserList</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<b>AccountManager</b>::<a class="el" href="a00002.html">UserList</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::AccountManager::UserList</h1><!-- doxytag: class="DummyFTPServer::AccountManager::UserList" -->
+<p>Třída sloužící jako databáze uživatel v paměti.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00047_source.html">userlist.h</a>&gt;</code></p>
+
+<p><a href="a00085.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a794dec3298ed42430921c279e393fa16"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::UserList" ref="a794dec3298ed42430921c279e393fa16" args="(std::string userListFile)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a794dec3298ed42430921c279e393fa16">UserList</a> (std::string userListFile)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vytváří seznam uživatel. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00001.html">User</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73">getByUsername</a> (std::string username)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k získání ukazatele na uživatele.  <a href="#a492e42eee1527295c1a1655a96c0ce73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb">add</a> (<a class="el" href="a00001.html">User</a> *user)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k přidávání uživatel do seznamu.  <a href="#a732f7d6f0023e91483b2aa87f6fd23cb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a6744fce820848230444984e8689e93ca">remove</a> (<a class="el" href="a00001.html">User</a> *user)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k odebrání uživatele ze seznamu.  <a href="#a6744fce820848230444984e8689e93ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#af635ba7711f893584b933e47fce98594">loadUserList</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k načtení seznamu uživatel, ze souboru.  <a href="#af635ba7711f893584b933e47fce98594"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3">parseUser</a> (std::string input)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k načtení jednoho uživatele.  <a href="#ac4fd9c9543c1b202653cd643ec2de2e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a410e24922f6077bce1d33bfb7d907f98">parsePassword</a> (std::string input, std::string *password, PasswordType *type)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k načtení seznamu uživatel, ze souboru.  <a href="#a410e24922f6077bce1d33bfb7d907f98"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9567b8539b26f3410f5c6182ece8d215"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::contains" ref="a9567b8539b26f3410f5c6182ece8d215" args="(std::string username)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215">contains</a> (std::string username)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provádí kontrolu unikátnosti uživatelského jména. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a409b88c98134007600343251721907ad">count</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Slouží k zjištění počtu uživatel.  <a href="#a409b88c98134007600343251721907ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a3dcfe6dcf1a50aee5a9a89a51ffa8828">isEmpty</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Kontrola prázdnosti seznamu.  <a href="#a3dcfe6dcf1a50aee5a9a89a51ffa8828"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#ac727c0d3f27c5c8be672ac5380fc77fa">clean</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Smaže celý seznam uživatel.  <a href="#ac727c0d3f27c5c8be672ac5380fc77fa"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Třída sloužící jako databáze uživatel v paměti. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00047_source.html#l00044">44</a> v souboru <a class="el" href="a00047_source.html">userlist.h</a>.</p>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="a732f7d6f0023e91483b2aa87f6fd23cb"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::add" ref="a732f7d6f0023e91483b2aa87f6fd23cb" args="(User *user)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00001.html">User</a> *&nbsp;</td>
+          <td class="paramname"> <em>user</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k přidávání uživatel do seznamu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>user</em>&nbsp;</td><td>Vstupní ukazatel na objekt uživatele. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném přidání, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00050">50</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00046_source.html#l00167">contains()</a> a <a class="el" href="a00044_source.html#l00039">DummyFTPServer::AccountManager::User::getUsername()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00094">parseUser()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_cgraph.png" border="0" usemap="#a00002_a732f7d6f0023e91483b2aa87f6fd23cb_cgraph_map" alt=""></div>
+<map name="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_cgraph_map" id="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_cgraph">
+<area shape="rect" id="node3" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="407,5,780,35"/><area shape="rect" id="node7" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="400,59,787,88"/><area shape="rect" id="node5" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="836,5,1260,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_icgraph.png" border="0" usemap="#a00002_a732f7d6f0023e91483b2aa87f6fd23cb_icgraph_map" alt=""></div>
+<map name="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_icgraph_map" id="a00002_a732f7d6f0023e91483b2aa87f6fd23cb_icgraph">
+<area shape="rect" id="node3" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="400,5,787,35"/><area shape="rect" id="node5" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="835,5,1235,35"/><area shape="rect" id="node7" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1284,5,1577,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac727c0d3f27c5c8be672ac5380fc77fa"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::clean" ref="ac727c0d3f27c5c8be672ac5380fc77fa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::clean </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Smaže celý seznam uživatel. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném vyprázdnění, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00181">181</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00070">loadUserList()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_ac727c0d3f27c5c8be672ac5380fc77fa_icgraph.png" border="0" usemap="#a00002_ac727c0d3f27c5c8be672ac5380fc77fa_icgraph_map" alt=""></div>
+<map name="a00002_ac727c0d3f27c5c8be672ac5380fc77fa_icgraph_map" id="a00002_ac727c0d3f27c5c8be672ac5380fc77fa_icgraph">
+<area shape="rect" id="node3" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="408,5,808,35"/><area shape="rect" id="node5" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="857,5,1151,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a409b88c98134007600343251721907ad"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::count" ref="a409b88c98134007600343251721907ad" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DummyFTPServer::AccountManager::UserList::count </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k zjištění počtu uživatel. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací celkový počet uživatel v seznamu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00173">173</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00120">DummyFTPServer::Core::getUserCount()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a409b88c98134007600343251721907ad_icgraph.png" border="0" usemap="#a00002_a409b88c98134007600343251721907ad_icgraph_map" alt=""></div>
+<map name="a00002_a409b88c98134007600343251721907ad_icgraph_map" id="a00002_a409b88c98134007600343251721907ad_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a6c476f0a147fa2733c94c95ae0644927" title="Metoda pro získání počtu uživatelů v databázi." alt="" coords="411,5,683,35"/><area shape="rect" id="node5" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="732,5,985,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a492e42eee1527295c1a1655a96c0ce73"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::getByUsername" ref="a492e42eee1527295c1a1655a96c0ce73" args="(std::string username)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00001.html">User</a> * DummyFTPServer::AccountManager::UserList::getByUsername </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>username</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k získání ukazatele na uživatele. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>username</em>&nbsp;</td><td>Nastaví jméno hledaného uživatele. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací ukazatel na uživatele. Pokud uživatel neexistuje bude vrácen NULL pointer. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00040">40</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00167">contains()</a> a <a class="el" href="a00019_source.html#l00116">DummyFTPServer::Core::getUser()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a492e42eee1527295c1a1655a96c0ce73_icgraph.png" border="0" usemap="#a00002_a492e42eee1527295c1a1655a96c0ce73_icgraph_map" alt=""></div>
+<map name="a00002_a492e42eee1527295c1a1655a96c0ce73_icgraph_map" id="a00002_a492e42eee1527295c1a1655a96c0ce73_icgraph">
+<area shape="rect" id="node3" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="481,5,855,35"/><area shape="rect" id="node13" href="a00005.html#acb052bf5de54db15a8ac1c08f8dc0736" title="Metoda vrací ukazatel na uživatele podle zadaného jména." alt="" coords="551,59,785,88"/><area shape="rect" id="node5" href="a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="905,5,1249,35"/><area shape="rect" id="node7" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="1299,5,1685,35"/><area shape="rect" id="node9" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="1733,5,2133,35"/><area shape="rect" id="node11" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="2183,5,2476,35"/><area shape="rect" id="node15" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="907,59,1248,88"/><area shape="rect" id="node17" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="1329,59,1655,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dcfe6dcf1a50aee5a9a89a51ffa8828"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::isEmpty" ref="a3dcfe6dcf1a50aee5a9a89a51ffa8828" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kontrola prázdnosti seznamu. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu pokud je seznam prázdný, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00177">177</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af635ba7711f893584b933e47fce98594"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::loadUserList" ref="af635ba7711f893584b933e47fce98594" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::loadUserList </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k načtení seznamu uživatel, ze souboru. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném načtení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00070">70</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00046_source.html#l00181">clean()</a> a <a class="el" href="a00046_source.html#l00094">parseUser()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00034">DummyFTPServer::Core::loadConfiguration()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_af635ba7711f893584b933e47fce98594_cgraph.png" border="0" usemap="#a00002_af635ba7711f893584b933e47fce98594_cgraph_map" alt=""></div>
+<map name="a00002_af635ba7711f893584b933e47fce98594_cgraph_map" id="a00002_af635ba7711f893584b933e47fce98594_cgraph">
+<area shape="rect" id="node3" href="a00002.html#ac727c0d3f27c5c8be672ac5380fc77fa" title="Smaže celý seznam uživatel." alt="" coords="469,112,824,141"/><area shape="rect" id="node5" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="453,165,840,195"/><area shape="rect" id="node7" href="a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="924,59,1268,88"/><area shape="rect" id="node15" href="a00001.html#a79e422479421f40cdc2f12f880b31ab5" title="Třídní metoda provádějící kontrolu existence cesty." alt="" coords="913,112,1279,141"/><area shape="rect" id="node19" href="a00002.html#a410e24922f6077bce1d33bfb7d907f98" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="888,165,1304,195"/><area shape="rect" id="node21" href="a00005.html#a41656f64db5d97e5c2d6e5923058e126" title="Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného..." alt="" coords="992,219,1200,248"/><area shape="rect" id="node23" href="a00005.html#a55048e8e9a1e5f23e3769582a06748b4" title="Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu..." alt="" coords="967,272,1225,301"/><area shape="rect" id="node9" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="1375,5,1748,35"/><area shape="rect" id="node13" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="1368,59,1755,88"/><area shape="rect" id="node11" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="1820,5,2244,35"/><area shape="rect" id="node17" href="a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="1353,112,1769,141"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_af635ba7711f893584b933e47fce98594_icgraph.png" border="0" usemap="#a00002_af635ba7711f893584b933e47fce98594_icgraph_map" alt=""></div>
+<map name="a00002_af635ba7711f893584b933e47fce98594_icgraph_map" id="a00002_af635ba7711f893584b933e47fce98594_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="455,5,748,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a410e24922f6077bce1d33bfb7d907f98"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::parsePassword" ref="a410e24922f6077bce1d33bfb7d907f98" args="(std::string input, std::string *password, PasswordType *type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::parsePassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&nbsp;</td>
+          <td class="paramname"> <em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PasswordType *&nbsp;</td>
+          <td class="paramname"> <em>type</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k načtení seznamu uživatel, ze souboru. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>input</em>&nbsp;</td><td>Vstupní textový řetězec. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>password</em>&nbsp;</td><td>Výstupní heslo. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Formát výstupního hesla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném načtení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00138">138</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00094">parseUser()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a410e24922f6077bce1d33bfb7d907f98_icgraph.png" border="0" usemap="#a00002_a410e24922f6077bce1d33bfb7d907f98_icgraph_map" alt=""></div>
+<map name="a00002_a410e24922f6077bce1d33bfb7d907f98_icgraph_map" id="a00002_a410e24922f6077bce1d33bfb7d907f98_icgraph">
+<area shape="rect" id="node3" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="469,5,856,35"/><area shape="rect" id="node5" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="904,5,1304,35"/><area shape="rect" id="node7" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1353,5,1647,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4fd9c9543c1b202653cd643ec2de2e3"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::parseUser" ref="ac4fd9c9543c1b202653cd643ec2de2e3" args="(std::string input)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::parseUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>input</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k načtení jednoho uživatele. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>input</em>&nbsp;</td><td>Vstupní textový řetězec obsahující jeden uživatelský záznam. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném načtení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00094">94</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00046_source.html#l00050">add()</a>, <a class="el" href="a00044_source.html#l00077">DummyFTPServer::AccountManager::User::isValidPath()</a>, <a class="el" href="a00046_source.html#l00138">parsePassword()</a>, <a class="el" href="a00019_source.html#l00132">DummyFTPServer::Core::split()</a> a <a class="el" href="a00019_source.html#l00143">DummyFTPServer::Core::stringToBool()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00070">loadUserList()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_cgraph.png" border="0" usemap="#a00002_ac4fd9c9543c1b202653cd643ec2de2e3_cgraph_map" alt=""></div>
+<map name="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_cgraph_map" id="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_cgraph">
+<area shape="rect" id="node3" href="a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="476,59,820,88"/><area shape="rect" id="node11" href="a00001.html#a79e422479421f40cdc2f12f880b31ab5" title="Třídní metoda provádějící kontrolu existence cesty." alt="" coords="465,112,831,141"/><area shape="rect" id="node15" href="a00002.html#a410e24922f6077bce1d33bfb7d907f98" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="440,165,856,195"/><area shape="rect" id="node17" href="a00005.html#a41656f64db5d97e5c2d6e5923058e126" title="Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného..." alt="" coords="544,219,752,248"/><area shape="rect" id="node19" href="a00005.html#a55048e8e9a1e5f23e3769582a06748b4" title="Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu..." alt="" coords="519,272,777,301"/><area shape="rect" id="node5" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="927,5,1300,35"/><area shape="rect" id="node9" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="920,59,1307,88"/><area shape="rect" id="node7" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="1372,5,1796,35"/><area shape="rect" id="node13" href="a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="905,112,1321,141"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_icgraph.png" border="0" usemap="#a00002_ac4fd9c9543c1b202653cd643ec2de2e3_icgraph_map" alt=""></div>
+<map name="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_icgraph_map" id="a00002_ac4fd9c9543c1b202653cd643ec2de2e3_icgraph">
+<area shape="rect" id="node3" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="440,5,840,35"/><area shape="rect" id="node5" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="889,5,1183,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6744fce820848230444984e8689e93ca"></a><!-- doxytag: member="DummyFTPServer::AccountManager::UserList::remove" ref="a6744fce820848230444984e8689e93ca" args="(User *user)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::AccountManager::UserList::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00001.html">User</a> *&nbsp;</td>
+          <td class="paramname"> <em>user</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Slouží k odebrání uživatele ze seznamu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>user</em>&nbsp;</td><td>Vstupní ukazatel na objekt uživatele. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném odebrání, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00046_source.html#l00058">58</a> v souboru <a class="el" href="a00046_source.html">userlist.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00044_source.html#l00039">DummyFTPServer::AccountManager::User::getUsername()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00002_a6744fce820848230444984e8689e93ca_cgraph.png" border="0" usemap="#a00002_a6744fce820848230444984e8689e93ca_cgraph_map" alt=""></div>
+<map name="a00002_a6744fce820848230444984e8689e93ca_cgraph_map" id="a00002_a6744fce820848230444984e8689e93ca_cgraph">
+<area shape="rect" id="node3" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="424,5,811,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00047_source.html">userlist.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00046_source.html">userlist.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:55 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00013.html#a1df62de90d6e4fedf45112b7dc30ea50" title="Slouží k získání skupiny." alt="" coords="284,5,553,35"/>
+<area shape="rect" id="node5" href="$a00013.html#aa982eed48e92b9f2e98fdf22b3393d23" title="Slouží k získání vlastníka." alt="" coords="283,59,555,88"/>
+<area shape="rect" id="node7" href="$a00013.html#a8c60e136e91af281f32eb9eb9b873f9f" title="Vrací reálnou cestu k aktuálnímu adresáři." alt="" coords="288,112,549,141"/>
+</map>

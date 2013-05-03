@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1199,5,1492,35"/>
+<area shape="rect" id="node5" href="$a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="315,31,701,60"/>
+<area shape="rect" id="node7" href="$a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="749,31,1149,60"/>
+</map>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Zdrojový soubor /home/marek/Projekty/DummyFTPServer/source/ftpcommandstor.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Seznam&nbsp;souborů</span></a></li>
+    </ul>
+  </div>
+<h1>/home/marek/Projekty/DummyFTPServer/source/ftpcommandstor.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2010 by Marek Hakala   *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   marek@hakala.cz   *</span>
+<a name="l00004"></a>00004 <span class="comment"> *</span>
+<a name="l00005"></a>00005 <span class="comment"> *   Semestrální práce PA2 - ČVUT FIT</span>
+<a name="l00006"></a>00006 <span class="comment"> *   Téma : Implementace FTP serveru</span>
+<a name="l00007"></a>00007 <span class="comment"> *                                                                         *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00009"></a>00009 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00010"></a>00010 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00012"></a>00012 <span class="comment"> *                                                                         *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00014"></a>00014 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00015"></a>00015 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00017"></a>00017 <span class="comment"> *                                                                         *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00019"></a>00019 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00020"></a>00020 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00021"></a>00021 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00022"></a>00022 <span class="comment"> ***************************************************************************/</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;ftpcommandstor.h&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;ftpserver.h&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="a00010.html#af4d190552a5712f696eca060f9f13e06">00027</a> <span class="keyword">namespace </span>DummyFTPServer {
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     <a class="code" href="a00010.html#af4d190552a5712f696eca060f9f13e06" title="Vytváří objekt pro zpracování FTP příkaz STOR.">FTPCommandSTOR::FTPCommandSTOR</a>(<span class="keyword">const</span> QString &amp;fileName, <span class="keywordtype">bool</span> append, <a class="code" href="a00012.html" title="Objekt reprezentující serverové vlákno.">ServerThread</a> *parent)
+<a name="l00030"></a>00030     : <a class="code" href="a00007.html" title="Zajišťuje obsluhu FTP příkazu (Abstraktní třída).">FTPCommand</a>(fileName, parent) {
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032         isConnected = <span class="keyword">true</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034         <span class="keywordflow">if</span> (!append)
+<a name="l00035"></a>00035             file.open(QFile::WriteOnly);
+<a name="l00036"></a>00036         <span class="keywordflow">else</span>
+<a name="l00037"></a>00037             file.open(QFile::WriteOnly | QFile::Append);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039         <span class="keywordflow">if</span> (file.exists() &amp;&amp; file.isOpen() &amp;&amp; file.isWritable()) {
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041             connect(stParent-&gt;passvSocket, SIGNAL(readyRead()),
+<a name="l00042"></a>00042                     <span class="keyword">this</span>, SLOT(sendData()));
+<a name="l00043"></a>00043             connect(stParent-&gt;passvSocket, SIGNAL(error(QAbstractSocket::SocketError)),
+<a name="l00044"></a>00044                     <span class="keyword">this</span>, SLOT(deleteLater()));
+<a name="l00045"></a>00045             connect(stParent-&gt;passvSocket, SIGNAL(disconnected()), <span class="keyword">this</span>, SLOT(disconnected()));
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047             stParent-&gt;sendMessage(<span class="stringliteral">&quot;150&quot;</span>, <span class="stringliteral">&quot;File status OK, about to open data connection.&quot;</span>);
+<a name="l00048"></a>00048         } <span class="keywordflow">else</span> {
+<a name="l00049"></a>00049             stParent-&gt;stopDTP();
+<a name="l00050"></a>00050             isConnected = <span class="keyword">false</span>;
+<a name="l00051"></a>00051             deleteLater();
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053             stParent-&gt;sendMessage(<span class="stringliteral">&quot;451&quot;</span>, <span class="stringliteral">&quot;Requested action aborted. Local error in processing.&quot;</span>);
+<a name="l00054"></a>00054         }
+<a name="l00055"></a><a class="code" href="a00010.html#aee57ca991908158c9cb1f6aaaab85794">00055</a>     }
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057     <span class="keywordtype">void</span> <a class="code" href="a00010.html#aee57ca991908158c9cb1f6aaaab85794" title="Slouží k řádnému ukončení spojení.">FTPCommandSTOR::disconnected</a>() {
+<a name="l00058"></a>00058         disconnect(<a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;passvSocket, 0, <span class="keyword">this</span>, 0);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060         <a class="code" href="a00007.html#ac3464ea9ae9d9a042e97defd829ff569" title="Pracovní soubor.">file</a>.flush();
+<a name="l00061"></a>00061         <a class="code" href="a00007.html#ac3464ea9ae9d9a042e97defd829ff569" title="Pracovní soubor.">file</a>.close();
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063         <a class="code" href="a00007.html#aef2bb9f1282e90393b75dc52d11db2aa" title="Příznak aktivního spojení.">isConnected</a> = <span class="keyword">false</span>;
+<a name="l00064"></a>00064         <a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;<a class="code" href="a00012.html#ab22a9cdb6fbb8793f88d54b3be5b33f4" title="Metoda, která posílá FTP zprávy do TCP socketu.">sendMessage</a>(<span class="stringliteral">&quot;250&quot;</span>, <span class="stringliteral">&quot;Transfer complete.&quot;</span>);
+<a name="l00065"></a><a class="code" href="a00010.html#a12030cb01d330376f64dc5801bfdc75c">00065</a>     }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067     <span class="keywordtype">void</span> <a class="code" href="a00010.html#a12030cb01d330376f64dc5801bfdc75c" title="Slouží k zápisu dat, ze socketu do souboru.">FTPCommandSTOR::sendData</a>() {
+<a name="l00068"></a>00068         <span class="keywordflow">if</span> (!<a class="code" href="a00007.html#aef2bb9f1282e90393b75dc52d11db2aa" title="Příznak aktivního spojení.">isConnected</a>)
+<a name="l00069"></a>00069             <span class="keywordflow">return</span>;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         <a class="code" href="a00007.html#ac3464ea9ae9d9a042e97defd829ff569" title="Pracovní soubor.">file</a>.write(<a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;passvSocket-&gt;readAll());
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073         <span class="keywordflow">if</span> (<a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;mode != ServerThread::STOR &amp;&amp; <a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;mode != ServerThread::APPE) {
+<a name="l00074"></a>00074             <a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;<a class="code" href="a00012.html#ab22a9cdb6fbb8793f88d54b3be5b33f4" title="Metoda, která posílá FTP zprávy do TCP socketu.">sendMessage</a>(<span class="stringliteral">&quot;451&quot;</span>, <span class="stringliteral">&quot;Requested action aborted. Local error in processing.&quot;</span>);
+<a name="l00075"></a>00075             <a class="code" href="a00007.html#aa59b441b4f990b2ba1ad7bc8ff202ea5" title="Ukazatel na předka.">stParent</a>-&gt;<a class="code" href="a00012.html#a61eb44b800056cdc1dd6c51c7d77599d" title="Zastaví DTP.">stopDTP</a>();
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077             deleteLater();
+<a name="l00078"></a>00078             <a class="code" href="a00007.html#aef2bb9f1282e90393b75dc52d11db2aa" title="Příznak aktivního spojení.">isConnected</a> = <span class="keyword">false</span>;
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080     }
+<a name="l00081"></a>00081 }
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:43 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

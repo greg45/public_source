@@ -1,0 +1,87 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'ftpcommandlist.h'
+**
+** Created: Wed Mar 7 15:56:43 2012
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../source/ftpcommandlist.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'ftpcommandlist.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 62
+#error "This file was generated using the moc from 4.7.3. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_DummyFTPServer__FTPCommandLIST[] = {
+
+ // content:
+       5,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       4,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      32,   31,   31,   31, 0x0a,
+      48,   43,   31,   31, 0x0a,
+      60,   31,   31,   31, 0x2a,
+      68,   31,   31,   31, 0x0a,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_DummyFTPServer__FTPCommandLIST[] = {
+    "DummyFTPServer::FTPCommandLIST\0\0"
+    "sendData()\0stop\0error(bool)\0error()\0"
+    "finishing()\0"
+};
+
+const QMetaObject DummyFTPServer::FTPCommandLIST::staticMetaObject = {
+    { &FTPCommand::staticMetaObject, qt_meta_stringdata_DummyFTPServer__FTPCommandLIST,
+      qt_meta_data_DummyFTPServer__FTPCommandLIST, 0 }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &DummyFTPServer::FTPCommandLIST::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *DummyFTPServer::FTPCommandLIST::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *DummyFTPServer::FTPCommandLIST::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_DummyFTPServer__FTPCommandLIST))
+        return static_cast<void*>(const_cast< FTPCommandLIST*>(this));
+    return FTPCommand::qt_metacast(_clname);
+}
+
+int DummyFTPServer::FTPCommandLIST::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = FTPCommand::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: sendData(); break;
+        case 1: error((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: error(); break;
+        case 3: finishing(); break;
+        default: ;
+        }
+        _id -= 4;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00005.html#ac74b20f541b925da9db0af9459677454" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="404,85,695,115"/>
+<area shape="rect" id="node5" href="$a00003.html#a6036c6987189d51f882c43107db43c45" title="Provede načtení konfiguračního souboru." alt="" coords="375,139,724,168"/>
+<area shape="rect" id="node9" href="$a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="349,192,749,221"/>
+<area shape="rect" id="node31" href="$a00005.html#a55048e8e9a1e5f23e3769582a06748b4" title="Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu..." alt="" coords="1311,272,1569,301"/>
+<area shape="rect" id="node7" href="$a00003.html#aaa780269028723cc035a787a05433a00" title="Provede vyprázdnění databáze." alt="" coords="855,85,1127,115"/>
+<area shape="rect" id="node11" href="$a00002.html#ac727c0d3f27c5c8be672ac5380fc77fa" title="Smaže celý seznam uživatel." alt="" coords="813,139,1168,168"/>
+<area shape="rect" id="node13" href="$a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="797,192,1184,221"/>
+<area shape="rect" id="node15" href="$a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="1268,59,1612,88"/>
+<area shape="rect" id="node23" href="$a00001.html#a79e422479421f40cdc2f12f880b31ab5" title="Třídní metoda provádějící kontrolu existence cesty." alt="" coords="1257,112,1623,141"/>
+<area shape="rect" id="node27" href="$a00002.html#a410e24922f6077bce1d33bfb7d907f98" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="1232,165,1648,195"/>
+<area shape="rect" id="node29" href="$a00005.html#a41656f64db5d97e5c2d6e5923058e126" title="Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného..." alt="" coords="1336,219,1544,248"/>
+<area shape="rect" id="node17" href="$a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="1719,5,2092,35"/>
+<area shape="rect" id="node21" href="$a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="1712,59,2099,88"/>
+<area shape="rect" id="node19" href="$a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="2164,5,2588,35"/>
+<area shape="rect" id="node25" href="$a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="1697,112,2113,141"/>
+</map>

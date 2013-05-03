@@ -1,0 +1,141 @@
+/***************************************************************************
+ *   Copyright (C) 2010 by Marek Hakala   *
+ *   marek@hakala.cz   *
+ *
+ *   Semestrální práce PA2 - ČVUT FIT
+ *   Téma : Implementace FTP serveru
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
+#ifndef FILEPATH_H
+#define FILEPATH_H
+
+#include <QDir>
+#include <QByteArray>
+#include <QObject>
+
+namespace DummyFTPServer {
+
+    /*! \class WorkPath
+     *  \brief Třídá provádí veškerou práci, ze soubory a adresáři od načítání obsahu po mazání atd...
+     */
+    class WorkPath {
+    public:
+        /*! \fn WorkPath(const QString &path)
+         *  \brief Vytváří objekt, který provádí manipulaci, ze soubory a adresáři.
+         *  \param path Nastaví pracovní cestu.
+         */
+        WorkPath(const QString &path);
+
+        /*! \fn QString realPath()
+         *  \brief Vrací reálnou cestu k aktuálnímu adresáři.
+         */
+        QString realPath();
+
+        /*! \fn QString realFilePath(QString filename)
+         *  \brief Provádí překlad ftp adresy na reálnou adresu.
+         *  \param filename Název souboru.
+         */
+        QString realFilePath(QString filename);
+
+        /*! \fn bool cdUp()
+         *  \brief Nastaví aktuální adresář na nadřazený adresář.
+         */
+        bool cdUp();
+
+        /*! \fn QString pwd()
+         *  \brief Vrací cestu k aktuálnímu adresáři.
+         */
+        QString pwd();
+
+        /*! \fn bool cwd(const QString &path)
+         *  \brief Mění aktuální adresář.
+         *  \param path Nastaví cestu.
+         */
+        bool cwd(const QString &path);
+
+        /*! \fn bool cwd()
+         *  \brief Mění aktuální adresář na domovský adresář.
+         */
+        bool cwd() {
+            return cwd(homePath);
+        }
+
+        /*! \fn bool mkd(const QString &name)
+         *  \brief Vytváří nový adresář.
+         *  \param name Nastaví jméno nového adresáře.
+         */
+        bool mkd(const QString &name);
+
+        /*! \fn bool rmd(const QString &name)
+         *  \brief Smaže adresář.
+         *  \param name Nastaví jméno adresáře.
+         */
+        bool rmd(const QString &name);
+
+        /*! \fn bool dele(const QString &name)
+         *  \brief Smaže soubor.
+         *  \param name Název souboru.
+         */
+        bool dele(const QString &name);
+
+        /*! \fn bool rename(const QString &fromFileName, const QString &toFileName)
+         *  \brief Přejmenovává soubory.
+         *  \param fromFileName Starý název souboru.
+         *  \param toFileName Nový název souboru.
+         */
+        bool rename(const QString &fromFileName, const QString &toFileName);
+
+        /*! \fn bool isWritable(const QString &filename)
+         *  \brief Kontrola zapisovatelnosti.
+         *  \param filename Název souboru.
+         */
+        bool isWritable(const QString &filename);
+
+        /*! \fn void list(QList<QByteArray> &sList)
+         *  \brief Seznam souborů.
+         *  \param sList Vstupní seznam souborů.
+         */
+        void list(QList<QByteArray> &sList);
+
+        /*! \fn QString getOwner(const QFileInfo &info)
+         *  \brief Slouží k získání vlastníka.
+         *  \param info Ukazatel na soubor.
+         */
+        static QString getOwner(const QFileInfo &info);
+
+        /*! \fn QString getGroup(const QFileInfo &info)
+         *  \brief Slouží k získání skupiny.
+         *  \param info Ukazatel na soubor.
+         */
+        static QString getGroup(const QFileInfo &info);
+
+    private:
+        /*! \var homePath
+         *  \brief Domovský adresář.
+         */
+        QString homePath;
+
+        /*! \var currentPath
+         *  \brief Aktuální adresář.
+         */
+        QString currentPath;
+    };
+}
+
+#endif // FILEPATH_H
+

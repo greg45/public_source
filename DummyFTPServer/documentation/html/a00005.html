@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>DummyFTPServer: Dokumentace třídy DummyFTPServer::Core</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generováno programem Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hlavní&nbsp;stránka</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Seznam&nbsp;tříd</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchie&nbsp;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&nbsp;členů&nbsp;tříd</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>DummyFTPServer</b>::<a class="el" href="a00005.html">Core</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentace třídy DummyFTPServer::Core</h1><!-- doxytag: class="DummyFTPServer::Core" -->
+<p>Tato třída je jádrem celé aplikace. Zajišťuje spolupráci mezi nastavením, uživatelskou databází a serverovou částí.  
+<a href="#_details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00020_source.html">core.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram tříd pro DummyFTPServer::Core:</div>
+<div class="dynsection">
+<div class="center"><img src="a00064.png" border="0" usemap="#DummyFTPServer_1_1Core_coll__map" alt="Collaboration graph"/></div>
+<map name="DummyFTPServer_1_1Core_coll__map" id="DummyFTPServer_1_1Core_coll__map">
+<area shape="rect" id="node2" href="a00003.html" title="Třída sloužící jako databáze nastavení v paměti." alt="" coords="5,41,235,282"/><area shape="rect" id="node4" href="a00002.html" title="Třída sloužící jako databáze uživatel v paměti." alt="" coords="259,6,571,317"/></map>
+<center><span class="legend">[<a href="graph_legend.html">vysvětlivky</a>]</span></center></div>
+
+<p><a href="a00065.html">Seznam všech členů.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89">loadConfiguration</a> (std::string configurationPath, std::string userListPath)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sloužící k načítání konfigurace a uživatelské databáze.  <a href="#a3cccbda46e6ed8bc332b1e64709c4e89"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d">startServer</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sloužící k zapnutí serverové části do listen režimu.  <a href="#a048e274c239b09784804ebe5a7aa1a8d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a094f646294adcdd42c2b30a3bdf79a76">getAnonymousHome</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda slouží k získaní domovského adresáře uživatele anonymous.  <a href="#a094f646294adcdd42c2b30a3bdf79a76"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ac74b20f541b925da9db0af9459677454">getSettingsValue</a> (std::string sectionAndKey, std::string *value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda vrací hodnotu z nastavení podle zadaného klíče.  <a href="#ac74b20f541b925da9db0af9459677454"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#aff315e73e2cf8a201f98877e4495bb58">getSettingsValue</a> (std::string section, std::string key, std::string *value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda vrací hodnotu z nastavení podle zadaného klíče.  <a href="#aff315e73e2cf8a201f98877e4495bb58"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00001.html">User</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#acb052bf5de54db15a8ac1c08f8dc0736">getUser</a> (std::string username)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda vrací ukazatel na uživatele podle zadaného jména.  <a href="#acb052bf5de54db15a8ac1c08f8dc0736"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a6c476f0a147fa2733c94c95ae0644927">getUserCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pro získání počtu uživatelů v databázi.  <a href="#a6c476f0a147fa2733c94c95ae0644927"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac77d35de269b9f8145fd0cd3a1ef3909"></a><!-- doxytag: member="DummyFTPServer::Core::isEnabledAnonymousAccess" ref="ac77d35de269b9f8145fd0cd3a1ef3909" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ac77d35de269b9f8145fd0cd3a1ef3909">isEnabledAnonymousAccess</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sloužící k získání příznaku, který indikuje povolení anonymního přístupu. <br/></td></tr>
+<tr><td colspan="2"><h2>Statické veřejné metody</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00005.html">Core</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a53160267772b280a4395f280ef70c835">Instance</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pro vytvoření/získání instance třídy <a class="el" href="a00005.html" title="Tato třída je jádrem celé aplikace. Zajišťuje spolupráci mezi nastavením...">Core</a>. Dle návrhového vzoru Singleton.  <a href="#a53160267772b280a4395f280ef70c835"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#ac3223888ddc645b510bce8369b92112e">validatePortRange</a> (unsigned int port)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda provádějící validaci TCP portu.  <a href="#ac3223888ddc645b510bce8369b92112e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a41656f64db5d97e5c2d6e5923058e126">split</a> (std::stringstream &amp;ss, std::string *output, char delimiter=DEFAULT_DELIMITER)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného oddělovače.  <a href="#a41656f64db5d97e5c2d6e5923058e126"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00005.html#a55048e8e9a1e5f23e3769582a06748b4">stringToBool</a> (std::string str)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu podle zvoleného oddělovače.  <a href="#a55048e8e9a1e5f23e3769582a06748b4"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailní popis</h2>
+<p>Tato třída je jádrem celé aplikace. Zajišťuje spolupráci mezi nastavením, uživatelskou databází a serverovou částí. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00020_source.html#l00048">48</a> v souboru <a class="el" href="a00020_source.html">core.h</a>.</p>
+<hr/><h2>Dokumentace k metodám</h2>
+<a class="anchor" id="a094f646294adcdd42c2b30a3bdf79a76"></a><!-- doxytag: member="DummyFTPServer::Core::getAnonymousHome" ref="a094f646294adcdd42c2b30a3bdf79a76" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DummyFTPServer::Core::getAnonymousHome </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda slouží k získaní domovského adresáře uživatele anonymous. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací cestu k domovskému adresáři uživatele anonymous. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00108">108</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00019_source.html#l00074">getSettingsValue()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a094f646294adcdd42c2b30a3bdf79a76_cgraph.png" border="0" usemap="#a00005_a094f646294adcdd42c2b30a3bdf79a76_cgraph_map" alt=""></div>
+<map name="a00005_a094f646294adcdd42c2b30a3bdf79a76_cgraph_map" id="a00005_a094f646294adcdd42c2b30a3bdf79a76_cgraph">
+<area shape="rect" id="node3" href="a00005.html#ac74b20f541b925da9db0af9459677454" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="375,5,665,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aff315e73e2cf8a201f98877e4495bb58"></a><!-- doxytag: member="DummyFTPServer::Core::getSettingsValue" ref="aff315e73e2cf8a201f98877e4495bb58" args="(std::string section, std::string key, std::string *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::getSettingsValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda vrací hodnotu z nastavení podle zadaného klíče. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>section</em>&nbsp;</td><td>Nastaví sekci. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Nastaví klíč. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>Vstupní ukazatel pomocí, kterého nám bude navrácena získaná hodnota. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při nalezení hodnoty, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00091">91</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00015_source.html#l00082">DummyFTPServer::Configuration::getSection()</a> a <a class="el" href="a00017_source.html#l00040">DummyFTPServer::ConfSection::getValue()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_aff315e73e2cf8a201f98877e4495bb58_cgraph.png" border="0" usemap="#a00005_aff315e73e2cf8a201f98877e4495bb58_cgraph_map" alt=""></div>
+<map name="a00005_aff315e73e2cf8a201f98877e4495bb58_cgraph_map" id="a00005_aff315e73e2cf8a201f98877e4495bb58_cgraph">
+<area shape="rect" id="node3" href="a00003.html#a32e49891c855ad22baf888258f3040ba" title="Slouží k získání ukazatele na sekci." alt="" coords="347,5,653,35"/><area shape="rect" id="node5" href="a00004.html#a91d0c6b14e9ca84f24a69dc5393cf0fb" title="Slouží k získání hodnoty." alt="" coords="357,59,643,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac74b20f541b925da9db0af9459677454"></a><!-- doxytag: member="DummyFTPServer::Core::getSettingsValue" ref="ac74b20f541b925da9db0af9459677454" args="(std::string sectionAndKey, std::string *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::getSettingsValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>sectionAndKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda vrací hodnotu z nastavení podle zadaného klíče. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>sectionAndKey</em>&nbsp;</td><td>Nastaví cestu k požadované hodnotě. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>Vstupní ukazatel pomocí, kterého nám bude navrácena získaná hodnota. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při nalezení hodnoty, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00074">74</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00108">getAnonymousHome()</a>, <a class="el" href="a00019_source.html#l00034">loadConfiguration()</a> a <a class="el" href="a00019_source.html#l00058">startServer()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_ac74b20f541b925da9db0af9459677454_icgraph.png" border="0" usemap="#a00005_ac74b20f541b925da9db0af9459677454_icgraph_map" alt=""></div>
+<map name="a00005_ac74b20f541b925da9db0af9459677454_icgraph_map" id="a00005_ac74b20f541b925da9db0af9459677454_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a094f646294adcdd42c2b30a3bdf79a76" title="Metoda slouží k získaní domovského adresáře uživatele anonymous." alt="" coords="348,5,665,35"/><area shape="rect" id="node5" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="360,59,653,88"/><area shape="rect" id="node7" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="380,112,633,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acb052bf5de54db15a8ac1c08f8dc0736"></a><!-- doxytag: member="DummyFTPServer::Core::getUser" ref="acb052bf5de54db15a8ac1c08f8dc0736" args="(std::string username)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00001.html">User</a> * DummyFTPServer::Core::getUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>username</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda vrací ukazatel na uživatele podle zadaného jména. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>username</em>&nbsp;</td><td>Jméno hledaného uživatele. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací ukazatel na objekt uživatele, v případě neexistujícího uživatele vrátí null pointer. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00116">116</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00046_source.html#l00040">DummyFTPServer::AccountManager::UserList::getByUsername()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_acb052bf5de54db15a8ac1c08f8dc0736_cgraph.png" border="0" usemap="#a00005_acb052bf5de54db15a8ac1c08f8dc0736_cgraph_map" alt=""></div>
+<map name="a00005_acb052bf5de54db15a8ac1c08f8dc0736_cgraph_map" id="a00005_acb052bf5de54db15a8ac1c08f8dc0736_cgraph">
+<area shape="rect" id="node3" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="289,5,713,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_acb052bf5de54db15a8ac1c08f8dc0736_icgraph.png" border="0" usemap="#a00005_acb052bf5de54db15a8ac1c08f8dc0736_icgraph_map" alt=""></div>
+<map name="a00005_acb052bf5de54db15a8ac1c08f8dc0736_icgraph_map" id="a00005_acb052bf5de54db15a8ac1c08f8dc0736_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="289,5,631,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="680,5,1005,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c476f0a147fa2733c94c95ae0644927"></a><!-- doxytag: member="DummyFTPServer::Core::getUserCount" ref="a6c476f0a147fa2733c94c95ae0644927" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DummyFTPServer::Core::getUserCount </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda pro získání počtu uživatelů v databázi. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací počet uživatelů, v uživatelské databázi. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00120">120</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00046_source.html#l00173">DummyFTPServer::AccountManager::UserList::count()</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00058">startServer()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a6c476f0a147fa2733c94c95ae0644927_cgraph.png" border="0" usemap="#a00005_a6c476f0a147fa2733c94c95ae0644927_cgraph_map" alt=""></div>
+<map name="a00005_a6c476f0a147fa2733c94c95ae0644927_cgraph_map" id="a00005_a6c476f0a147fa2733c94c95ae0644927_cgraph">
+<area shape="rect" id="node3" href="a00002.html#a409b88c98134007600343251721907ad" title="Slouží k zjištění počtu uživatel." alt="" coords="325,5,683,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a6c476f0a147fa2733c94c95ae0644927_icgraph.png" border="0" usemap="#a00005_a6c476f0a147fa2733c94c95ae0644927_icgraph_map" alt=""></div>
+<map name="a00005_a6c476f0a147fa2733c94c95ae0644927_icgraph_map" id="a00005_a6c476f0a147fa2733c94c95ae0644927_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="327,5,580,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a53160267772b280a4395f280ef70c835"></a><!-- doxytag: member="DummyFTPServer::Core::Instance" ref="a53160267772b280a4395f280ef70c835" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00005.html">Core</a> * DummyFTPServer::Core::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda pro vytvoření/získání instance třídy <a class="el" href="a00005.html" title="Tato třída je jádrem celé aplikace. Zajišťuje spolupráci mezi nastavením...">Core</a>. Dle návrhového vzoru Singleton. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací instanci třídy <a class="el" href="a00005.html" title="Tato třída je jádrem celé aplikace. Zajišťuje spolupráci mezi nastavením...">Core</a>. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00020_source.html#l00113">113</a> v souboru <a class="el" href="a00020_source.html">core.h</a>.</p>
+
+<p>Používá se v <a class="el" href="a00042_source.html#l00092">DummyFTPServer::ServerThread::parseCommand()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a53160267772b280a4395f280ef70c835_icgraph.png" border="0" usemap="#a00005_a53160267772b280a4395f280ef70c835_icgraph_map" alt=""></div>
+<map name="a00005_a53160267772b280a4395f280ef70c835_icgraph_map" id="a00005_a53160267772b280a4395f280ef70c835_icgraph">
+<area shape="rect" id="node3" href="a00012.html#af2c19fa878aa9c8d9fae9ac009daf5b2" title="Metoda, která zpracovává příchozí požadavky." alt="" coords="292,5,633,35"/><area shape="rect" id="node5" href="a00012.html#a2777246ba726abb11e65b57da950d8a4" title="Vytváří serverové vlákno." alt="" coords="683,5,1008,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cccbda46e6ed8bc332b1e64709c4e89"></a><!-- doxytag: member="DummyFTPServer::Core::loadConfiguration" ref="a3cccbda46e6ed8bc332b1e64709c4e89" args="(std::string configurationPath, std::string userListPath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::loadConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>configurationPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>userListPath</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda sloužící k načítání konfigurace a uživatelské databáze. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>configurationPath</em>&nbsp;</td><td>Nastaví cestu ke konfiguračnímu souboru. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>userListPath</em>&nbsp;</td><td>Nastaví cestu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném načtení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00034">34</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00019_source.html#l00074">getSettingsValue()</a>, <a class="el" href="a00015_source.html#l00054">DummyFTPServer::Configuration::loadConfiguration()</a>, <a class="el" href="a00046_source.html#l00070">DummyFTPServer::AccountManager::UserList::loadUserList()</a> a <a class="el" href="a00019_source.html#l00143">stringToBool()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a3cccbda46e6ed8bc332b1e64709c4e89_cgraph.png" border="0" usemap="#a00005_a3cccbda46e6ed8bc332b1e64709c4e89_cgraph_map" alt=""></div>
+<map name="a00005_a3cccbda46e6ed8bc332b1e64709c4e89_cgraph_map" id="a00005_a3cccbda46e6ed8bc332b1e64709c4e89_cgraph">
+<area shape="rect" id="node3" href="a00005.html#ac74b20f541b925da9db0af9459677454" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="404,85,695,115"/><area shape="rect" id="node5" href="a00003.html#a6036c6987189d51f882c43107db43c45" title="Provede načtení konfiguračního souboru." alt="" coords="375,139,724,168"/><area shape="rect" id="node9" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="349,192,749,221"/><area shape="rect" id="node31" href="a00005.html#a55048e8e9a1e5f23e3769582a06748b4" title="Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu..." alt="" coords="1311,272,1569,301"/><area shape="rect" id="node7" href="a00003.html#aaa780269028723cc035a787a05433a00" title="Provede vyprázdnění databáze." alt="" coords="855,85,1127,115"/><area shape="rect" id="node11" href="a00002.html#ac727c0d3f27c5c8be672ac5380fc77fa" title="Smaže celý seznam uživatel." alt="" coords="813,139,1168,168"/><area shape="rect" id="node13" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="797,192,1184,221"/><area shape="rect" id="node15" href="a00002.html#a732f7d6f0023e91483b2aa87f6fd23cb" title="Slouží k přidávání uživatel do seznamu." alt="" coords="1268,59,1612,88"/><area shape="rect" id="node23" href="a00001.html#a79e422479421f40cdc2f12f880b31ab5" title="Třídní metoda provádějící kontrolu existence cesty." alt="" coords="1257,112,1623,141"/><area shape="rect" id="node27" href="a00002.html#a410e24922f6077bce1d33bfb7d907f98" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="1232,165,1648,195"/><area shape="rect" id="node29" href="a00005.html#a41656f64db5d97e5c2d6e5923058e126" title="Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného..." alt="" coords="1336,219,1544,248"/><area shape="rect" id="node17" href="a00002.html#a9567b8539b26f3410f5c6182ece8d215" title="Provádí kontrolu unikátnosti uživatelského jména." alt="" coords="1719,5,2092,35"/><area shape="rect" id="node21" href="a00001.html#a982c53762c36723af38cdd36bf34e3fb" title="Metoda vrací uživatelské jméno." alt="" coords="1712,59,2099,88"/><area shape="rect" id="node19" href="a00002.html#a492e42eee1527295c1a1655a96c0ce73" title="Slouží k získání ukazatele na uživatele." alt="" coords="2164,5,2588,35"/><area shape="rect" id="node25" href="a00001.html#a43a13176ce65c3e30d180a484ca1aed0" title="Metoda vrací cestu k domovskému adresáři." alt="" coords="1697,112,2113,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a41656f64db5d97e5c2d6e5923058e126"></a><!-- doxytag: member="DummyFTPServer::Core::split" ref="a41656f64db5d97e5c2d6e5923058e126" args="(std::stringstream &amp;ss, std::string *output, char delimiter=DEFAULT_DELIMITER)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::split </td>
+          <td>(</td>
+          <td class="paramtype">std::stringstream &amp;&nbsp;</td>
+          <td class="paramname"> <em>ss</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&nbsp;</td>
+          <td class="paramname"> <em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>delimiter</em> = <code>DEFAULT_DELIMITER</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Netřídní metoda sloužící k rozdělení textového řetězce podle zvoleného oddělovače. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ss</em>&nbsp;</td><td>Vstupní textový proud. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>output</em>&nbsp;</td><td>Výstupní textový řetězec. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>delimiter</em>&nbsp;</td><td>Nastaví oddělovač. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném rozdělení, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00132">132</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00046_source.html#l00094">DummyFTPServer::AccountManager::UserList::parseUser()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a41656f64db5d97e5c2d6e5923058e126_icgraph.png" border="0" usemap="#a00005_a41656f64db5d97e5c2d6e5923058e126_icgraph_map" alt=""></div>
+<map name="a00005_a41656f64db5d97e5c2d6e5923058e126_icgraph_map" id="a00005_a41656f64db5d97e5c2d6e5923058e126_icgraph">
+<area shape="rect" id="node3" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="264,5,651,35"/><area shape="rect" id="node5" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="699,5,1099,35"/><area shape="rect" id="node7" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1148,5,1441,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a048e274c239b09784804ebe5a7aa1a8d"></a><!-- doxytag: member="DummyFTPServer::Core::startServer" ref="a048e274c239b09784804ebe5a7aa1a8d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::startServer </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda sloužící k zapnutí serverové části do listen režimu. </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném startu v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00058">58</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="a00019_source.html#l00074">getSettingsValue()</a>, <a class="el" href="a00019_source.html#l00120">getUserCount()</a>, <a class="el" href="a00020_source.html#l00105">isEnabledAnonymousAccess()</a>, <a class="el" href="a00030_source.html#l00031">DummyFTPServer::FTPServer::start()</a> a <a class="el" href="a00019_source.html#l00124">validatePortRange()</a>.</p>
+
+<p><div class="dynheader">
+Tato funkce volá...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a048e274c239b09784804ebe5a7aa1a8d_cgraph.png" border="0" usemap="#a00005_a048e274c239b09784804ebe5a7aa1a8d_cgraph_map" alt=""></div>
+<map name="a00005_a048e274c239b09784804ebe5a7aa1a8d_cgraph_map" id="a00005_a048e274c239b09784804ebe5a7aa1a8d_cgraph">
+<area shape="rect" id="node3" href="a00005.html#ac74b20f541b925da9db0af9459677454" title="Metoda vrací hodnotu z nastavení podle zadaného klíče." alt="" coords="347,5,637,35"/><area shape="rect" id="node5" href="a00005.html#a6c476f0a147fa2733c94c95ae0644927" title="Metoda pro získání počtu uživatelů v databázi." alt="" coords="356,59,628,88"/><area shape="rect" id="node9" href="a00005.html#ac77d35de269b9f8145fd0cd3a1ef3909" title="Metoda sloužící k získání příznaku, který indikuje povolení anonymního..." alt="" coords="309,112,675,141"/><area shape="rect" id="node11" href="a00011.html#aa17ea13040d2135582236eabd52e2e46" title="Zapne server." alt="" coords="369,165,615,195"/><area shape="rect" id="node17" href="a00005.html#ac3223888ddc645b510bce8369b92112e" title="Metoda provádějící validaci TCP portu." alt="" coords="343,219,641,248"/><area shape="rect" id="node7" href="a00002.html#a409b88c98134007600343251721907ad" title="Slouží k zjištění počtu uživatel." alt="" coords="723,59,1080,88"/><area shape="rect" id="node13" href="a00011.html#a60c220afbdf0ed541520566100da7cc1" title="Vytváří objekt, který reprezentuje FTP server." alt="" coords="761,165,1041,195"/><area shape="rect" id="node15" href="a00011.html#a18cb04d108216fbe219b1bcb20b776a3" title="Tento slot obsluhuje nová spojení." alt="" coords="1129,165,1441,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a55048e8e9a1e5f23e3769582a06748b4"></a><!-- doxytag: member="DummyFTPServer::Core::stringToBool" ref="a55048e8e9a1e5f23e3769582a06748b4" args="(std::string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DummyFTPServer::Core::stringToBool </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>str</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Netřídní metoda sloužící k převodu textového řetězce na boolovskou hodnotu podle zvoleného oddělovače. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Vstupní textový řetězec. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při úspěšném převodu textu na boolovskou hodnotu, v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00143">143</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00034">loadConfiguration()</a> a <a class="el" href="a00046_source.html#l00094">DummyFTPServer::AccountManager::UserList::parseUser()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_a55048e8e9a1e5f23e3769582a06748b4_icgraph.png" border="0" usemap="#a00005_a55048e8e9a1e5f23e3769582a06748b4_icgraph_map" alt=""></div>
+<map name="a00005_a55048e8e9a1e5f23e3769582a06748b4_icgraph_map" id="a00005_a55048e8e9a1e5f23e3769582a06748b4_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a3cccbda46e6ed8bc332b1e64709c4e89" title="Metoda sloužící k načítání konfigurace a uživatelské databáze." alt="" coords="1199,5,1492,35"/><area shape="rect" id="node5" href="a00002.html#ac4fd9c9543c1b202653cd643ec2de2e3" title="Slouží k načtení jednoho uživatele." alt="" coords="315,31,701,60"/><area shape="rect" id="node7" href="a00002.html#af635ba7711f893584b933e47fce98594" title="Slouží k načtení seznamu uživatel, ze souboru." alt="" coords="749,31,1149,60"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3223888ddc645b510bce8369b92112e"></a><!-- doxytag: member="DummyFTPServer::Core::validatePortRange" ref="ac3223888ddc645b510bce8369b92112e" args="(unsigned int port)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DummyFTPServer::Core::validatePortRange </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>port</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metoda provádějící validaci TCP portu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>port</em>&nbsp;</td><td>Nastaví číslo kontrolovaného portu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>Vrací pravdu při správně nastaveném portu v opačném případě nepravdu. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="a00019_source.html#l00124">124</a> v souboru <a class="el" href="a00019_source.html">core.cpp</a>.</p>
+
+<p>Používá se v <a class="el" href="a00019_source.html#l00058">startServer()</a>.</p>
+
+<p><div class="dynheader">
+Tuto funkci volají...</div>
+<div class="dynsection">
+<div class="center"><img src="a00005_ac3223888ddc645b510bce8369b92112e_icgraph.png" border="0" usemap="#a00005_ac3223888ddc645b510bce8369b92112e_icgraph_map" alt=""></div>
+<map name="a00005_ac3223888ddc645b510bce8369b92112e_icgraph_map" id="a00005_ac3223888ddc645b510bce8369b92112e_icgraph">
+<area shape="rect" id="node3" href="a00005.html#a048e274c239b09784804ebe5a7aa1a8d" title="Metoda sloužící k zapnutí serverové části do listen režimu." alt="" coords="353,5,607,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00020_source.html">core.h</a></li>
+<li>/home/marek/Projekty/DummyFTPServer/source/<a class="el" href="a00019_source.html">core.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generováno Sun Jun 13 17:12:47 2010 pro projekt DummyFTPServer programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>
